@@ -1,12 +1,12 @@
 [
   {
- "area" : "China Hall 201"
- "header": "Diving the Future",
-    "promptText": "How did the king encounter divinity?",
+ "area": "China Hall 201",
+ "header": "Divining the Future",
+ "promptText": "How did the king encounter divinity?",
  "item": "Map",
   },
  {
- "area" : "China Hall 201"
+ "area" : "China Hall 201",
  "header": "Guarding Against Evil",
  "promptText": "How did the king guard against evil?",
  "item": "Map",

@@ -41,22 +41,33 @@
                         <group width="1" alignment="left" id="FOI-wl-RER">
                             <items>
                                 <imageView width="48" height="1" alignment="left" id="pOL-8X-VOr"/>
-                                <label alignment="left" text="Hall Name" id="9Kd-D6-ZDf"/>
+                                <label alignment="left" text="Hall Name" numberOfLines="2" id="9Kd-D6-ZDf">
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                </label>
                             </items>
                         </group>
-                        <group width="1" height="0.59999999999999998" alignment="left" layout="vertical" id="YFu-bD-8xw">
+                        <group width="1" height="100" alignment="left" layout="vertical" id="YFu-bD-8xw">
                             <items>
-                                <label alignment="left" text="Prompt" id="MMV-O1-eEh"/>
-                                <button width="1" alignment="left" title="Go " id="V8k-5o-yfo">
+                                <label alignment="left" text="Header" numberOfLines="3" id="riI-QK-Pzj">
+                                    <fontDescription key="font" type="boldSystem" pointSize="12"/>
+                                </label>
+                                <label alignment="left" text="Prompt" numberOfLines="3" id="MMV-O1-eEh">
+                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                </label>
+                                <button width="1" alignment="left" verticalAlignment="bottom" title="Go " id="V8k-5o-yfo">
                                     <connections>
                                         <action selector="navigateToItem" destination="T1Z-ID-I6O" id="N1g-p2-PRo"/>
                                     </connections>
                                 </button>
                             </items>
+                            <gestureRecognizers>
+                                <panGestureRecognizer id="D3N-DE-3uk"/>
+                            </gestureRecognizers>
                         </group>
                     </items>
                     <connections>
                         <outlet property="Area" destination="9Kd-D6-ZDf" id="ypu-el-uSB"/>
+                        <outlet property="Header" destination="riI-QK-Pzj" id="idq-by-tub"/>
                         <outlet property="ItemImage" destination="pOL-8X-VOr" id="Vf3-Az-uPR"/>
                         <outlet property="PromptText" destination="MMV-O1-eEh" id="QeG-QU-7en"/>
                     </connections>

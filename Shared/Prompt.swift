@@ -14,7 +14,7 @@ class Prompt {
     let header: String
     let promptText: String
     private let item: String
-    let itemImg: Image
+    //let itemImg: UIImage
 
   
   class func allPrompts() -> [Prompt] {
@@ -38,7 +38,7 @@ class Prompt {
     self.header = header
     self.promptText = promptText
     self.item = item
-    self.itemImg = getImage(item)
+    //self.itemImg = getImage(item: item)
   }
   
   convenience init(dictionary: [String: String]) {
@@ -49,10 +49,5 @@ class Prompt {
     self.init(area: area, header: header, promptText: promptText, item: item)
   }
 
-    func getImage(item: String){
-        if let item = "Map"{
-         return #imageLiteral(resourceName: "Logo")
-    }
   
-}
 }

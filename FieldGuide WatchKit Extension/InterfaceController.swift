@@ -13,6 +13,7 @@ import WatchConnectivity
 
 class InterfaceController: WKInterfaceController, WCSessionDelegate {
 
+    var prompts = Prompt.allPrompts()
     
     @IBOutlet var HomeTitleLabel: WKInterfaceLabel!
     
@@ -33,7 +34,19 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         switch message["command"] as! String {
         case "Exhibit" :
             replyValues["status"] = "Done"
-            self.pushController(withName: "ExhibitPrompts", context: nil)
+            let promptcount = prompts.count
+            print(promptcount)
+            
+            var controllersNames = [String?](repeating: nil, count:promptcount)
+            var controllersContexts = [Prompt?](repeating: nil, count:promptcount)
+            if (promptcount>0) {
+                for i in 0...promptcount-1 {
+                    controllersNames[i] = "ExhibitPrompts"
+                    controllersContexts[i] = prompts[i]
+                }
+            }
+            // reload base controller
+            self.presentController(withNames: controllersNames as! [String], contexts: controllersContexts)
         default:
             break
         }

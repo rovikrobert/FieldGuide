@@ -12,6 +12,18 @@ import WatchConnectivity
 
 class PromptInterfaceController: WKInterfaceController, WCSessionDelegate {
    
+    override func awake (withContext: Any?) {
+        super.awake(withContext: withContext)
+        if (WCSession.isSupported()) {
+            let session = WCSession.default()
+            session.delegate = self
+            session.activate()
+        }
+        print("hello")
+        if let prompt = withContext as? Prompt { self.prompt = prompt }
+    }
+    
+    @IBOutlet var Header: WKInterfaceLabel!
     @IBOutlet var ItemImage: WKInterfaceImage!
     @IBOutlet var Area: WKInterfaceLabel!
     
@@ -20,46 +32,22 @@ class PromptInterfaceController: WKInterfaceController, WCSessionDelegate {
     @IBAction func navigateToItem() {
     }
     
-    var prompts = Prompt.allPrompts()
-    
-    
     var prompt: Prompt? {
         didSet {
             if let prompt = prompt {
+                Header.setText(prompt.header)
                 Area.setText(prompt.area)
                 PromptText.setText(prompt.promptText)
-                ItemImage.setImage(prompt.itemImg)
+                //ItemImage.setImage(prompt.itemImg)
             }
         }
     }
     
+    
+    
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
-        if (WCSession.isSupported()) {
-            let session = WCSession.default()
-            session.delegate = self
-            session.activate()
-        }
-        var promptcount = prompts.count
-        
-        NSMutableArray *controllersNames = [NSMutableArray arrayWithCapacity:pageCount]
-        NSMutableArray *controllersContexts = [NSMutableArray arrayWithCapacity:pageCount];
-        if (pageCount) {
-            for (uint8_t i = 0; i < pageCount; i++) {
-                [controllersNames addObject:@"page"];
-                [controllersContexts addObject:@[self, @(i)]];
-            }
-        }
-        else {
-            // no pages controller
-            [controllersNames addObject:@"nopage"];
-            [controllersContexts addObject:@[self, @(0)]];
-        }
-        
-        // reload base controller
-        [WKInterfaceController reloadRootControllersWithNames:controllersNames contexts:controllersContexts];
-        
     }
     
     internal func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?){
