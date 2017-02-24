@@ -47,6 +47,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             }
             // reload base controller
             self.presentController(withNames: controllersNames as! [String], contexts: controllersContexts)
+            WKInterfaceDevice.current().play(.notification)
         default:
             break
         }
