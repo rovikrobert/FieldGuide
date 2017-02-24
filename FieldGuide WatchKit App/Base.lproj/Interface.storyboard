@@ -1,39 +1,68 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11055"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--Museum-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller identifier="Museum" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="FieldGuide_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" id="Hzm-Lq-kws">
+                            <items>
+                                <imageView width="40" height="40" alignment="left" image="Logo" id="5j3-wY-bkB"/>
+                                <label height="20" alignment="center" verticalAlignment="center" text="FieldTracker" textAlignment="justified" id="y70-k4-mIL"/>
+                            </items>
+                            <color key="backgroundColor" red="0.98039215690000003" green="0.066666666669999999" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                        </group>
+                        <label alignment="center" verticalAlignment="center" text="Welcome to the Field Museum!" numberOfLines="2" id="jGd-4e-mKp"/>
+                    </items>
+                    <edgeInsets key="margins" left="1" right="0.0" top="6" bottom="0.0"/>
+                    <connections>
+                        <outlet property="HomeTitleLabel" destination="y70-k4-mIL" id="2aj-aB-Utn"/>
+                        <outlet property="HomeTitleLogo" destination="5j3-wY-bkB" id="BtW-BP-oOT"/>
+                        <outlet property="HomeWelcomeText" destination="jGd-4e-mKp" id="TNk-jY-nDY"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
         </scene>
-        <!--Static Notification Interface Controller-->
-        <scene sceneID="AEw-b0-oYE">
+        <!--ExhibitPrompts-->
+        <scene sceneID="CUz-Bd-QAH">
             <objects>
-                <notificationController id="YCC-NB-fut">
+                <controller identifier="ExhibitPrompts" id="T1Z-ID-I6O" customClass="PromptInterfaceController" customModule="FieldGuide_WatchKit_Extension">
                     <items>
-                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                        <group width="1" alignment="left" id="FOI-wl-RER">
+                            <items>
+                                <imageView width="48" height="1" alignment="left" id="pOL-8X-VOr"/>
+                                <label alignment="left" text="Hall Name" id="9Kd-D6-ZDf"/>
+                            </items>
+                        </group>
+                        <group width="1" height="0.59999999999999998" alignment="left" layout="vertical" id="YFu-bD-8xw">
+                            <items>
+                                <label alignment="left" text="Prompt" id="MMV-O1-eEh"/>
+                                <button width="1" alignment="left" title="Go " id="V8k-5o-yfo">
+                                    <connections>
+                                        <action selector="navigateToItem" destination="T1Z-ID-I6O" id="N1g-p2-PRo"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
                     </items>
-                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
                     <connections>
-                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
-                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                        <outlet property="Area" destination="9Kd-D6-ZDf" id="ypu-el-uSB"/>
+                        <outlet property="ItemImage" destination="pOL-8X-VOr" id="Vf3-Az-uPR"/>
+                        <outlet property="PromptText" destination="MMV-O1-eEh" id="QeG-QU-7en"/>
                     </connections>
-                </notificationController>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="643"/>
-        </scene>
-        <!--Notification Controller-->
-        <scene sceneID="ZPc-GJ-vnh">
-            <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider="target"/>
-            </objects>
-            <point key="canvasLocation" x="468" y="643"/>
+            <point key="canvasLocation" x="463" y="340"/>
         </scene>
     </scenes>
 </document>

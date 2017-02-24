@@ -21,6 +21,13 @@
 		5B4D7F281E5FD75B00F285FF /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D7F271E5FD75B00F285FF /* ExtensionDelegate.swift */; };
 		5B4D7F2A1E5FD75B00F285FF /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D7F291E5FD75B00F285FF /* NotificationController.swift */; };
 		5B4D7F2C1E5FD75C00F285FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B4D7F2B1E5FD75C00F285FF /* Assets.xcassets */; };
+		5B4D7F411E5FD94E00F285FF /* Shared in Resources */ = {isa = PBXBuildFile; fileRef = 5B4D7F401E5FD94E00F285FF /* Shared */; };
+		5B4D7F421E5FD94E00F285FF /* Shared in Resources */ = {isa = PBXBuildFile; fileRef = 5B4D7F401E5FD94E00F285FF /* Shared */; };
+		5B4D7F441E6093B200F285FF /* PromptInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D7F431E6093B200F285FF /* PromptInterfaceController.swift */; };
+		5B4D7F471E60961400F285FF /* Prompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D7F461E60961400F285FF /* Prompt.swift */; };
+		5B4D7F481E60961400F285FF /* Prompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D7F461E60961400F285FF /* Prompt.swift */; };
+		5B4D7F4A1E60961900F285FF /* Prompts.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B4D7F491E60961900F285FF /* Prompts.json */; };
+		5B4D7F4B1E60961900F285FF /* Prompts.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B4D7F491E60961900F285FF /* Prompts.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +101,10 @@
 		5B4D7F291E5FD75B00F285FF /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		5B4D7F2B1E5FD75C00F285FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B4D7F2D1E5FD75C00F285FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B4D7F401E5FD94E00F285FF /* Shared */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Shared; sourceTree = "<group>"; };
+		5B4D7F431E6093B200F285FF /* PromptInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromptInterfaceController.swift; sourceTree = "<group>"; };
+		5B4D7F461E60961400F285FF /* Prompt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Prompt.swift; path = Shared/Prompt.swift; sourceTree = "<group>"; };
+		5B4D7F491E60961900F285FF /* Prompts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Prompts.json; path = Shared/Prompts.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,11 +135,13 @@
 		5B4D7EE91E5FD75900F285FF = {
 			isa = PBXGroup;
 			children = (
+				5B4D7F451E6095D400F285FF /* Shared */,
 				5B4D7EF41E5FD75900F285FF /* FieldGuide */,
 				5B4D7F091E5FD75B00F285FF /* FieldGuideTests */,
 				5B4D7F131E5FD75B00F285FF /* FieldGuide WatchKit App */,
 				5B4D7F221E5FD75B00F285FF /* FieldGuide WatchKit Extension */,
 				5B4D7EF31E5FD75900F285FF /* Products */,
+				5B4D7F401E5FD94E00F285FF /* Shared */,
 			);
 			sourceTree = "<group>";
 		};
@@ -181,6 +194,7 @@
 				5B4D7F251E5FD75B00F285FF /* InterfaceController.swift */,
 				5B4D7F271E5FD75B00F285FF /* ExtensionDelegate.swift */,
 				5B4D7F291E5FD75B00F285FF /* NotificationController.swift */,
+				5B4D7F431E6093B200F285FF /* PromptInterfaceController.swift */,
 				5B4D7F2B1E5FD75C00F285FF /* Assets.xcassets */,
 				5B4D7F2D1E5FD75C00F285FF /* Info.plist */,
 				5B4D7F231E5FD75B00F285FF /* Supporting Files */,
@@ -194,6 +208,15 @@
 				5B4D7F241E5FD75B00F285FF /* PushNotificationPayload.apns */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5B4D7F451E6095D400F285FF /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				5B4D7F461E60961400F285FF /* Prompt.swift */,
+				5B4D7F491E60961900F285FF /* Prompts.json */,
+			);
+			name = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,7 +352,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B4D7F4A1E60961900F285FF /* Prompts.json in Resources */,
 				5B4D7F001E5FD75A00F285FF /* LaunchScreen.storyboard in Resources */,
+				5B4D7F411E5FD94E00F285FF /* Shared in Resources */,
 				5B4D7EFD1E5FD75A00F285FF /* Assets.xcassets in Resources */,
 				5B4D7EFB1E5FD75A00F285FF /* Main.storyboard in Resources */,
 			);
@@ -356,6 +381,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B4D7F2C1E5FD75C00F285FF /* Assets.xcassets in Resources */,
+				5B4D7F421E5FD94E00F285FF /* Shared in Resources */,
+				5B4D7F4B1E60961900F285FF /* Prompts.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +394,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B4D7EF81E5FD75A00F285FF /* ViewController.swift in Sources */,
+				5B4D7F471E60961400F285FF /* Prompt.swift in Sources */,
 				5B4D7EF61E5FD75A00F285FF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,8 +412,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B4D7F2A1E5FD75B00F285FF /* NotificationController.swift in Sources */,
+				5B4D7F441E6093B200F285FF /* PromptInterfaceController.swift in Sources */,
 				5B4D7F281E5FD75B00F285FF /* ExtensionDelegate.swift in Sources */,
 				5B4D7F261E5FD75B00F285FF /* InterfaceController.swift in Sources */,
+				5B4D7F481E60961400F285FF /* Prompt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -675,6 +705,7 @@
 				5B4D7F321E5FD75C00F285FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5B4D7F341E5FD75C00F285FF /* Build configuration list for PBXNativeTarget "FieldGuide WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -683,6 +714,7 @@
 				5B4D7F361E5FD75C00F285FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5B4D7F381E5FD75C00F285FF /* Build configuration list for PBXNativeTarget "FieldGuide" */ = {
 			isa = XCConfigurationList;
@@ -691,6 +723,7 @@
 				5B4D7F3A1E5FD75C00F285FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5B4D7F3B1E5FD75C00F285FF /* Build configuration list for PBXNativeTarget "FieldGuideTests" */ = {
 			isa = XCConfigurationList;
@@ -699,6 +732,7 @@
 				5B4D7F3D1E5FD75C00F285FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

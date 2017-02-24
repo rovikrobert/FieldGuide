@@ -7,16 +7,41 @@
 //
 
 import UIKit
+import WatchConnectivity
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        if (WCSession.isSupported()) {
+            let session = WCSession.default()
+            session.delegate = self
+            session.activate()
+            
+            if session.isPaired != true {
+                print("Apple Watch is not paired")
+            }
+            
+            if session.isWatchAppInstalled != true {
+                print("WatchKit app is not installed")
+            }
+        } else {
+            print("WatchConnectivity is not supported on this device")
+        }
         return true
+    }
+    
+    internal func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?){
+    }
+    
+    func sessionDidBecomeInactive(_ session: WCSession){
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
