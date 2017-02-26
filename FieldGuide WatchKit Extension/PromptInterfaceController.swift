@@ -19,7 +19,6 @@ class PromptInterfaceController: WKInterfaceController, WCSessionDelegate {
             session.delegate = self
             session.activate()
         }
-        print("hello")
         if let prompt = withContext as? Prompt { self.prompt = prompt }
     }
     
@@ -29,7 +28,8 @@ class PromptInterfaceController: WKInterfaceController, WCSessionDelegate {
     
     @IBOutlet var PromptText: WKInterfaceLabel!
     
-    @IBAction func navigateToItem() {
+    @IBAction func goToCompass() {
+        self.presentController(withName: "Compass", context: self.prompt)
     }
     
     var prompt: Prompt? {
@@ -38,7 +38,7 @@ class PromptInterfaceController: WKInterfaceController, WCSessionDelegate {
                 Header.setText(prompt.header)
                 Area.setText(prompt.area)
                 PromptText.setText(prompt.promptText)
-                //ItemImage.setImage(prompt.itemImg)
+                ItemImage.setImageNamed("Logo")
             }
         }
     }

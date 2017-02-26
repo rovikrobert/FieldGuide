@@ -28,6 +28,8 @@
 		5B4D7F481E60961400F285FF /* Prompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D7F461E60961400F285FF /* Prompt.swift */; };
 		5B4D7F4A1E60961900F285FF /* Prompts.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B4D7F491E60961900F285FF /* Prompts.json */; };
 		5B4D7F4B1E60961900F285FF /* Prompts.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B4D7F491E60961900F285FF /* Prompts.json */; };
+		5B4D7F4E1E6332C900F285FF /* CompassInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D7F4C1E6332C900F285FF /* CompassInterfaceController.swift */; };
+		5B4D7F511E63330B00F285FF /* atRailInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D7F4F1E63330B00F285FF /* atRailInterfaceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +107,8 @@
 		5B4D7F431E6093B200F285FF /* PromptInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromptInterfaceController.swift; sourceTree = "<group>"; };
 		5B4D7F461E60961400F285FF /* Prompt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Prompt.swift; path = Shared/Prompt.swift; sourceTree = "<group>"; };
 		5B4D7F491E60961900F285FF /* Prompts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Prompts.json; path = Shared/Prompts.json; sourceTree = "<group>"; };
+		5B4D7F4C1E6332C900F285FF /* CompassInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompassInterfaceController.swift; sourceTree = "<group>"; };
+		5B4D7F4F1E63330B00F285FF /* atRailInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = atRailInterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,10 +195,12 @@
 		5B4D7F221E5FD75B00F285FF /* FieldGuide WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				5B4D7F4C1E6332C900F285FF /* CompassInterfaceController.swift */,
 				5B4D7F251E5FD75B00F285FF /* InterfaceController.swift */,
 				5B4D7F271E5FD75B00F285FF /* ExtensionDelegate.swift */,
 				5B4D7F291E5FD75B00F285FF /* NotificationController.swift */,
 				5B4D7F431E6093B200F285FF /* PromptInterfaceController.swift */,
+				5B4D7F4F1E63330B00F285FF /* atRailInterfaceController.swift */,
 				5B4D7F2B1E5FD75C00F285FF /* Assets.xcassets */,
 				5B4D7F2D1E5FD75C00F285FF /* Info.plist */,
 				5B4D7F231E5FD75B00F285FF /* Supporting Files */,
@@ -413,8 +419,10 @@
 			files = (
 				5B4D7F2A1E5FD75B00F285FF /* NotificationController.swift in Sources */,
 				5B4D7F441E6093B200F285FF /* PromptInterfaceController.swift in Sources */,
+				5B4D7F511E63330B00F285FF /* atRailInterfaceController.swift in Sources */,
 				5B4D7F281E5FD75B00F285FF /* ExtensionDelegate.swift in Sources */,
 				5B4D7F261E5FD75B00F285FF /* InterfaceController.swift in Sources */,
+				5B4D7F4E1E6332C900F285FF /* CompassInterfaceController.swift in Sources */,
 				5B4D7F481E60961400F285FF /* Prompt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

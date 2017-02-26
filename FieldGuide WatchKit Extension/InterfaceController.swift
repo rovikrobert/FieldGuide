@@ -62,6 +62,8 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             session.delegate = self
             session.activate()
         }
+        
+        HomeTitleLogo.setImageNamed("Logo")
 
     }
     

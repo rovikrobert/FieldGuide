@@ -16,7 +16,7 @@
                     <items>
                         <group width="1" alignment="left" id="Hzm-Lq-kws">
                             <items>
-                                <imageView width="40" height="40" alignment="left" image="Logo" id="5j3-wY-bkB"/>
+                                <imageView width="40" height="40" alignment="left" id="5j3-wY-bkB"/>
                                 <label height="20" alignment="center" verticalAlignment="center" text="FieldTracker" textAlignment="justified" id="y70-k4-mIL"/>
                             </items>
                             <color key="backgroundColor" red="0.98039215690000003" green="0.066666666669999999" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -38,32 +38,26 @@
             <objects>
                 <controller identifier="ExhibitPrompts" id="T1Z-ID-I6O" customClass="PromptInterfaceController" customModule="FieldGuide_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="left" id="FOI-wl-RER">
+                        <group width="134" height="40" alignment="left" id="FOI-wl-RER">
                             <items>
-                                <imageView width="48" height="1" alignment="left" id="pOL-8X-VOr"/>
-                                <label alignment="left" text="Hall Name" numberOfLines="2" id="9Kd-D6-ZDf">
+                                <imageView width="40" height="40" alignment="left" id="pOL-8X-VOr"/>
+                                <label alignment="left" verticalAlignment="center" text="Hall Name" numberOfLines="2" id="9Kd-D6-ZDf">
                                     <fontDescription key="font" type="system" pointSize="12"/>
                                 </label>
                             </items>
+                            <color key="backgroundColor" red="0.97620397806167603" green="0.18670663237571716" blue="0.38073194026947021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </group>
-                        <group width="1" height="100" alignment="left" layout="vertical" id="YFu-bD-8xw">
-                            <items>
-                                <label alignment="left" text="Header" numberOfLines="3" id="riI-QK-Pzj">
-                                    <fontDescription key="font" type="boldSystem" pointSize="12"/>
-                                </label>
-                                <label alignment="left" text="Prompt" numberOfLines="3" id="MMV-O1-eEh">
-                                    <fontDescription key="font" type="system" pointSize="14"/>
-                                </label>
-                                <button width="1" alignment="left" verticalAlignment="bottom" title="Go " id="V8k-5o-yfo">
-                                    <connections>
-                                        <action selector="navigateToItem" destination="T1Z-ID-I6O" id="N1g-p2-PRo"/>
-                                    </connections>
-                                </button>
-                            </items>
-                            <gestureRecognizers>
-                                <panGestureRecognizer id="D3N-DE-3uk"/>
-                            </gestureRecognizers>
-                        </group>
+                        <label alignment="left" text="Header" numberOfLines="3" id="riI-QK-Pzj">
+                            <fontDescription key="font" type="boldSystem" pointSize="12"/>
+                        </label>
+                        <label alignment="left" text="Prompt" numberOfLines="3" id="MMV-O1-eEh">
+                            <fontDescription key="font" type="system" pointSize="14"/>
+                        </label>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="Go " id="V8k-5o-yfo">
+                            <connections>
+                                <action selector="goToCompass" destination="T1Z-ID-I6O" id="agt-8y-alf"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
                         <outlet property="Area" destination="9Kd-D6-ZDf" id="ypu-el-uSB"/>
@@ -74,6 +68,50 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="463" y="340"/>
+        </scene>
+        <!--Compass-->
+        <scene sceneID="69L-Wm-Y4x">
+            <objects>
+                <controller identifier="Compass" id="IVQ-yL-XwO" customClass="CompassInterfaceController" customModule="FieldGuide_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="Wds-Pe-aGR">
+                            <items>
+                                <label alignment="center" text="Follow the compass to the exhibit" textAlignment="center" numberOfLines="3" id="mYi-d4-peR"/>
+                            </items>
+                            <color key="backgroundColor" red="0.97620397810000004" green="0.18670663239999999" blue="0.38073194030000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </group>
+                        <imageView alignment="left" verticalAlignment="center" id="q4K-Jg-nf3">
+                            <color key="tintColor" red="0.97620397810000004" green="0.18670663239999999" blue="0.38073194030000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </imageView>
+                    </items>
+                    <connections>
+                        <outlet property="compassImage" destination="q4K-Jg-nf3" id="bgX-dY-9Ov"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="455" y="620"/>
+        </scene>
+        <!--atRail-->
+        <scene sceneID="wD4-Jb-TBY">
+            <objects>
+                <controller identifier="atRail" id="0us-vv-IyP" customClass="atRailInterfaceController" customModule="FieldGuide_WatchKit_Extension">
+                    <items>
+                        <group width="134" height="40" alignment="left" id="94o-CG-qlr">
+                            <items>
+                                <imageView width="40" height="40" alignment="left" id="zKu-fd-rmq"/>
+                                <label alignment="left" verticalAlignment="center" text="Hall Name" numberOfLines="2" id="8AR-ba-jgu">
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                </label>
+                            </items>
+                            <color key="backgroundColor" red="0.97620397810000004" green="0.18670663239999999" blue="0.38073194030000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </group>
+                        <label alignment="left" text="Prompt" numberOfLines="3" id="tSd-h6-hyR">
+                            <fontDescription key="font" type="system" pointSize="14"/>
+                        </label>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="696" y="616"/>
         </scene>
     </scenes>
 </document>
