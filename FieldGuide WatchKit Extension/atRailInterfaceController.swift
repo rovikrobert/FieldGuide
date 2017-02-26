@@ -12,15 +12,38 @@ import WatchConnectivity
 
 class atRailInterfaceController: WKInterfaceController, WCSessionDelegate {
     
+    @IBOutlet var itemImg: WKInterfaceImage!
+    @IBOutlet var hallName: WKInterfaceLabel!
+    @IBOutlet var promptText: WKInterfaceLabel!
+    @IBOutlet var railImg: WKInterfaceImage!
     
-    override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
-        super.willActivate()
+    var prompt: Prompt? {
+        didSet {
+            if let prompt = prompt {
+                hallName.setText(prompt.area)
+                promptText.setText(prompt.promptText)
+                itemImg.setImageNamed("Logo")
+            }
+        }
+    }
+
+    
+    
+    override func awake (withContext: Any?) {
+        super.awake(withContext: withContext)
         if (WCSession.isSupported()) {
             let session = WCSession.default()
             session.delegate = self
             session.activate()
         }
+        if let prompt = withContext as? Prompt { self.prompt = prompt }
+    }
+
+    
+    
+    override func willActivate() {
+        // This method is called when watch view controller is about to be visible to user
+        super.willActivate()
         
     }
     

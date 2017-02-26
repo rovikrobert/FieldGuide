@@ -47,7 +47,7 @@ class CompassInterfaceController: WKInterfaceController, WCSessionDelegate {
         case "Rail" :
             replyValues["status"] = "Done"
             // reload base controller
-            self.presentController(withName: "atRail", context: prompt)
+            self.presentController(withName: "atRail", context: self.prompt)
             WKInterfaceDevice.current().play(.notification)
         default:
             break

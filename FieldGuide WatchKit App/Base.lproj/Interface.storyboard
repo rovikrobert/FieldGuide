@@ -108,7 +108,19 @@
                         <label alignment="left" text="Prompt" numberOfLines="3" id="tSd-h6-hyR">
                             <fontDescription key="font" type="system" pointSize="14"/>
                         </label>
+                        <imageView width="50" height="50" alignment="center" image="Circle" id="Feb-ss-y47">
+                            <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </imageView>
+                        <label alignment="left" text="Tap to read on the Rail" minimumScaleFactor="0.69999999999999996" id="dnh-1Q-gGK">
+                            <fontDescription key="font" type="boldSystem" pointSize="14"/>
+                        </label>
                     </items>
+                    <connections>
+                        <outlet property="hallName" destination="8AR-ba-jgu" id="NPX-QY-Keo"/>
+                        <outlet property="itemImg" destination="zKu-fd-rmq" id="073-yU-9LD"/>
+                        <outlet property="promptText" destination="tSd-h6-hyR" id="LoX-7Q-2ul"/>
+                        <outlet property="railImg" destination="Feb-ss-y47" id="h7t-N7-Reo"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="696" y="616"/>
