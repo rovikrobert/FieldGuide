@@ -30,6 +30,7 @@
 		5B4D7F4B1E60961900F285FF /* Prompts.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B4D7F491E60961900F285FF /* Prompts.json */; };
 		5B4D7F4E1E6332C900F285FF /* CompassInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D7F4C1E6332C900F285FF /* CompassInterfaceController.swift */; };
 		5B4D7F511E63330B00F285FF /* atRailInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D7F4F1E63330B00F285FF /* atRailInterfaceController.swift */; };
+		5B5369841E6CF4700026F533 /* GuideCaseNumberControllerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5369821E6CF4700026F533 /* GuideCaseNumberControllerInterface.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		5B4D7F491E60961900F285FF /* Prompts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Prompts.json; path = Shared/Prompts.json; sourceTree = "<group>"; };
 		5B4D7F4C1E6332C900F285FF /* CompassInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompassInterfaceController.swift; sourceTree = "<group>"; };
 		5B4D7F4F1E63330B00F285FF /* atRailInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = atRailInterfaceController.swift; sourceTree = "<group>"; };
+		5B5369821E6CF4700026F533 /* GuideCaseNumberControllerInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideCaseNumberControllerInterface.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 		5B4D7F221E5FD75B00F285FF /* FieldGuide WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				5B5369821E6CF4700026F533 /* GuideCaseNumberControllerInterface.swift */,
 				5B4D7F4C1E6332C900F285FF /* CompassInterfaceController.swift */,
 				5B4D7F251E5FD75B00F285FF /* InterfaceController.swift */,
 				5B4D7F271E5FD75B00F285FF /* ExtensionDelegate.swift */,
@@ -420,6 +423,7 @@
 				5B4D7F2A1E5FD75B00F285FF /* NotificationController.swift in Sources */,
 				5B4D7F441E6093B200F285FF /* PromptInterfaceController.swift in Sources */,
 				5B4D7F511E63330B00F285FF /* atRailInterfaceController.swift in Sources */,
+				5B5369841E6CF4700026F533 /* GuideCaseNumberControllerInterface.swift in Sources */,
 				5B4D7F281E5FD75B00F285FF /* ExtensionDelegate.swift in Sources */,
 				5B4D7F261E5FD75B00F285FF /* InterfaceController.swift in Sources */,
 				5B4D7F4E1E6332C900F285FF /* CompassInterfaceController.swift in Sources */,

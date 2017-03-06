@@ -29,7 +29,8 @@ class PromptInterfaceController: WKInterfaceController, WCSessionDelegate {
     @IBOutlet var PromptText: WKInterfaceLabel!
     
     @IBAction func goToCompass() {
-        self.presentController(withName: "Compass", context: self.prompt)
+        self.presentController(withName: "GuideCaseNum", context: self.prompt)
+        //self.presentController(withName: "GuideCaseLogo", context: self.prompt)
     }
     
     var prompt: Prompt? {
@@ -44,20 +45,6 @@ class PromptInterfaceController: WKInterfaceController, WCSessionDelegate {
     }
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
-        
-        var replyValues = Dictionary<String, Any>()
-        
-        
-        switch message["command"] as! String {
-        case "Rail" :
-            replyValues["status"] = "Done"
-            // reload base controller
-            self.presentController(withName: "atRail", context: self.prompt)
-            WKInterfaceDevice.current().play(.notification)
-        default:
-            break
-        }
-        replyHandler(replyValues)
     }
 
     

@@ -69,14 +69,14 @@
             </objects>
             <point key="canvasLocation" x="463" y="340"/>
         </scene>
-        <!--Compass-->
+        <!--GuideCaseLogo-->
         <scene sceneID="69L-Wm-Y4x">
             <objects>
-                <controller identifier="Compass" id="IVQ-yL-XwO" customClass="CompassInterfaceController" customModule="FieldGuide_WatchKit_Extension">
+                <controller identifier="GuideCaseLogo" id="IVQ-yL-XwO" customClass="CompassInterfaceController" customModule="FieldGuide_WatchKit_Extension">
                     <items>
                         <group width="1" alignment="left" id="Wds-Pe-aGR">
                             <items>
-                                <label alignment="center" text="Follow the compass to the exhibit" textAlignment="center" numberOfLines="3" id="mYi-d4-peR"/>
+                                <label alignment="center" text="Look for the exhibit case with this icon!" textAlignment="center" numberOfLines="3" id="mYi-d4-peR"/>
                             </items>
                             <color key="backgroundColor" red="0.97620397810000004" green="0.18670663239999999" blue="0.38073194030000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </group>
@@ -124,6 +124,23 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="696" y="616"/>
+        </scene>
+        <!--GuideCaseNum-->
+        <scene sceneID="lyd-aD-fhm">
+            <objects>
+                <controller identifier="GuideCaseNum" id="1gC-3m-cxh" customClass="GuideCaseNumberControllerInterface" customModule="FieldGuide_WatchKit_Extension">
+                    <items>
+                        <group width="134" alignment="left" verticalAlignment="center" id="MiL-Cz-4fN">
+                            <items>
+                                <label alignment="center" verticalAlignment="center" text="Look for Exhibit Case #203!" textAlignment="center" numberOfLines="3" id="JTp-wk-N42"/>
+                            </items>
+                            <color key="backgroundColor" red="0.97620397810000004" green="0.18670663239999999" blue="0.38073194030000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </group>
+                        <label alignment="left" id="CbD-8f-gMD"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="620"/>
         </scene>
     </scenes>
 </document>
