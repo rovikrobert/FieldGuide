@@ -22,7 +22,7 @@ class atRailInterfaceController: WKInterfaceController, WCSessionDelegate {
             if let prompt = prompt {
                 hallName.setText(prompt.area)
                 promptText.setText(prompt.promptText)
-                itemImg.setImageNamed("Logo")
+                itemImg.setImageNamed("Artifact")
             }
         }
     }
@@ -39,11 +39,38 @@ class atRailInterfaceController: WKInterfaceController, WCSessionDelegate {
         if let prompt = withContext as? Prompt { self.prompt = prompt }
     }
 
-    
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
+        
+        var replyValues = Dictionary<String, Any>()
+        
+        
+        switch message["command"] as! String {
+        case "Connect" :
+            replyValues["status"] = "Done"
+        
+            self.presentController(withNames: ["ConnectedScreen"], contexts: nil)
+            WKInterfaceDevice.current().play(.notification)
+            WKInterfaceDevice.current().play(.notification)
+        case "Exhibit" :
+            replyValues["status"] = "Done"
+            
+            self.dismiss()
+            WKInterfaceDevice.current().play(.notification)
+        default:
+            break
+        }
+        replyHandler(replyValues)
+    }
+
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        if (WCSession.isSupported()) {
+            let session = WCSession.default()
+            session.delegate = self
+            session.activate()
+        }
         
     }
     

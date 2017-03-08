@@ -39,7 +39,7 @@ class PromptInterfaceController: WKInterfaceController, WCSessionDelegate {
                 Header.setText(prompt.header)
                 Area.setText(prompt.area)
                 PromptText.setText(prompt.promptText)
-                ItemImage.setImageNamed("Logo")
+                ItemImage.setImageNamed("Artifact")
             }
         }
     }
@@ -52,6 +52,11 @@ class PromptInterfaceController: WKInterfaceController, WCSessionDelegate {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        if (WCSession.isSupported()) {
+            let session = WCSession.default()
+            session.delegate = self
+            session.activate()
+        }
     }
     
     internal func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?){

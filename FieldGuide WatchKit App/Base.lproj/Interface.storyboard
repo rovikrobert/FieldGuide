@@ -79,6 +79,7 @@
                                 <label alignment="center" text="Look for the exhibit case with this icon!" textAlignment="center" numberOfLines="3" id="mYi-d4-peR"/>
                             </items>
                             <color key="backgroundColor" red="0.97620397810000004" green="0.18670663239999999" blue="0.38073194030000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="2" bottom="2"/>
                         </group>
                         <imageView alignment="left" verticalAlignment="center" id="q4K-Jg-nf3">
                             <color key="tintColor" red="0.97620397810000004" green="0.18670663239999999" blue="0.38073194030000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -123,7 +124,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="696" y="616"/>
+            <point key="canvasLocation" x="794" y="620"/>
         </scene>
         <!--GuideCaseNum-->
         <scene sceneID="lyd-aD-fhm">
@@ -132,15 +133,60 @@
                     <items>
                         <group width="134" alignment="left" verticalAlignment="center" id="MiL-Cz-4fN">
                             <items>
-                                <label alignment="center" verticalAlignment="center" text="Look for Exhibit Case #203!" textAlignment="center" numberOfLines="3" id="JTp-wk-N42"/>
+                                <label width="119" alignment="center" verticalAlignment="center" text="Look for Exhibit Case #203!" textAlignment="center" numberOfLines="3" id="JTp-wk-N42"/>
                             </items>
                             <color key="backgroundColor" red="0.97620397810000004" green="0.18670663239999999" blue="0.38073194030000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="2" bottom="2"/>
                         </group>
                         <label alignment="left" id="CbD-8f-gMD"/>
                     </items>
                 </controller>
             </objects>
             <point key="canvasLocation" x="220" y="620"/>
+        </scene>
+        <!--ConnectedScreen-->
+        <scene sceneID="vt2-Yc-i8Y">
+            <objects>
+                <controller identifier="ConnectedScreen" id="fCt-fD-JjI" customClass="ConnectedInterfaceController" customModule="FieldGuide_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="VXR-zd-lRs">
+                            <items>
+                                <label alignment="center" text="You are now connected to the exhibit" textAlignment="center" numberOfLines="3" id="pxR-e0-czC">
+                                    <fontDescription key="font" type="system" pointSize="15"/>
+                                </label>
+                            </items>
+                            <color key="backgroundColor" red="0.97620397810000004" green="0.18670663239999999" blue="0.38073194030000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="2" bottom="2"/>
+                        </group>
+                        <imageView width="80" height="72" alignment="center" image="Connected" contentMode="scaleAspectFit" id="LNJ-YG-tY4">
+                            <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </imageView>
+                        <label alignment="center" text="Simply walk away to return to previous screen" textAlignment="center" numberOfLines="3" id="rQC-N4-Sm7">
+                            <fontDescription key="font" type="system" pointSize="13"/>
+                        </label>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="216" y="908"/>
+        </scene>
+        <!--CollectedScreen-->
+        <scene sceneID="A9L-ZH-MhL">
+            <objects>
+                <controller identifier="CollectedScreen" id="UkI-cj-IcH" customClass="CollectedInterfaceController" customModule="FieldGuide_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="emI-BG-gWV">
+                            <items>
+                                <label alignment="left" verticalAlignment="center" text="New information has been collected and stored on your phone!" textAlignment="center" numberOfLines="5" id="uJH-O2-JgY">
+                                    <fontDescription key="font" type="system" pointSize="16"/>
+                                </label>
+                            </items>
+                            <color key="backgroundColor" red="0.97620397810000004" green="0.18670663239999999" blue="0.38073194030000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="467" y="943"/>
         </scene>
     </scenes>
 </document>

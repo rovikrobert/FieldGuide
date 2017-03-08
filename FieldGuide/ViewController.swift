@@ -13,6 +13,8 @@ class ViewController: UIViewController, WCSessionDelegate {
 
     @IBOutlet weak var RailStatus: UILabel!
     @IBOutlet weak var ExhibitStatus: UILabel!
+    @IBOutlet weak var CollectStatus: UILabel!
+    @IBOutlet weak var ConnectStatus: UILabel!
     
     @IBAction func arriveAtExhibit(_ sender: UIButton) {
         if WCSession.default().isReachable == true {
@@ -40,6 +42,34 @@ class ViewController: UIViewController, WCSessionDelegate {
         }
     }
     
+    @IBAction func connectToRail(_ sender: UIButton) {
+        if WCSession.default().isReachable == true {
+            let requestValues = ["command" : "Connect"]
+            let session = WCSession.default()
+            
+            session.sendMessage(requestValues, replyHandler: { reply in
+                self.ConnectStatus.text = reply["status"] as? String
+            }, errorHandler: { error in
+                print("error: \(error)")
+            })
+        }
+    }
+    
+    
+    @IBAction func collectInformation(_ sender: UIButton) {
+        if WCSession.default().isReachable == true {
+            let requestValues = ["command" : "Collect"]
+            let session = WCSession.default()
+            
+            session.sendMessage(requestValues, replyHandler: { reply in
+                self.CollectStatus.text = reply["status"] as? String
+            }, errorHandler: { error in
+                print("error: \(error)")
+            })
+        }
+    }
+    
+    
     internal func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?){
     }
     
@@ -60,6 +90,8 @@ class ViewController: UIViewController, WCSessionDelegate {
         }
         RailStatus.text = ""
         ExhibitStatus.text = ""
+        CollectStatus.text = ""
+        ConnectStatus.text = ""
     }
 
     override func didReceiveMemoryWarning() {

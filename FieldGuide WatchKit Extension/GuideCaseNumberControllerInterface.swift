@@ -32,6 +32,11 @@ class GuideCaseNumberControllerInterface: WKInterfaceController, WCSessionDelega
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        if (WCSession.isSupported()) {
+            let session = WCSession.default()
+            session.delegate = self
+            session.activate()
+        }
     }
     
     
