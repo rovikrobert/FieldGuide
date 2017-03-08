@@ -47,7 +47,7 @@ class CollectedInterfaceController: WKInterfaceController, WCSessionDelegate {
         var replyValues = Dictionary<String, Any>()
         
         switch message["command"] as! String {
-        case "Rail" :
+        case "Connect" :
             replyValues["status"] = "Done"
             // reload base controller
             self.dismiss()
