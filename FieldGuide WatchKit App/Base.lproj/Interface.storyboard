@@ -149,8 +149,8 @@
                             </items>
                             <edgeInsets key="margins" left="3" right="3" top="0.0" bottom="0.0"/>
                         </group>
-                        <label height="29" alignment="center" text="Tap to read on the Rail" id="dnh-1Q-gGK">
-                            <fontDescription key="font" type="system" weight="medium" pointSize="11"/>
+                        <label height="29" alignment="center" text="Tap on the exhibit screen" id="dnh-1Q-gGK">
+                            <fontDescription key="font" type="system" weight="medium" pointSize="10"/>
                         </label>
                     </items>
                     <connections>
@@ -168,14 +168,16 @@
             <objects>
                 <controller identifier="GuideCaseNum" id="1gC-3m-cxh" customClass="GuideCaseNumberControllerInterface" customModule="FieldGuide_WatchKit_Extension">
                     <items>
-                        <group width="134" height="113" alignment="left" verticalAlignment="center" id="MiL-Cz-4fN">
+                        <group width="134" height="147" alignment="left" layout="vertical" id="MiL-Cz-4fN">
                             <items>
+                                <imageView width="1" height="80" alignment="center" image="rail" id="IBo-i2-Yoy"/>
                                 <label width="119" alignment="center" verticalAlignment="center" text="Look for Exhibit Case #201!" textAlignment="center" numberOfLines="3" id="JTp-wk-N42">
                                     <color key="textColor" red="0.95281940700000001" green="0.54311341049999995" blue="0.36534529919999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="14"/>
                                 </label>
                             </items>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <edgeInsets key="margins" left="0.0" right="0.0" top="2" bottom="2"/>
+                            <edgeInsets key="margins" left="2" right="2" top="2" bottom="2"/>
                         </group>
                         <label alignment="left" id="CbD-8f-gMD"/>
                     </items>
@@ -191,7 +193,7 @@
                         <group width="1" alignment="left" id="VXR-zd-lRs">
                             <items>
                                 <label alignment="center" text="You are now connected to the exhibit" textAlignment="center" numberOfLines="3" id="pxR-e0-czC">
-                                    <color key="textColor" red="0.95281940700000001" green="0.54311341049999995" blue="0.36534529919999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="textColor" red="0.95294117647058818" green="0.54117647058823526" blue="0.36470588235294116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="font" type="system" pointSize="15"/>
                                 </label>
                             </items>
