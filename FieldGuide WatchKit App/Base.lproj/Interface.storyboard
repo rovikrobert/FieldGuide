@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12029"/>
     </dependencies>
     <scenes>
         <!--Museum-->
@@ -16,10 +16,14 @@
                     <items>
                         <group width="1" alignment="left" id="Hzm-Lq-kws">
                             <items>
-                                <imageView width="40" height="40" alignment="left" id="5j3-wY-bkB"/>
-                                <label height="20" alignment="center" verticalAlignment="center" text="FieldTracker" textAlignment="justified" id="y70-k4-mIL"/>
+                                <imageView width="40" height="40" alignment="left" animationDuration="1" id="5j3-wY-bkB">
+                                    <color key="tintColor" red="0.95281940700000001" green="0.54311341049999995" blue="0.36534529919999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </imageView>
+                                <label height="20" alignment="center" verticalAlignment="center" text="FieldGuide" textAlignment="justified" id="y70-k4-mIL">
+                                    <color key="textColor" red="0.95281940700000001" green="0.54311341049999995" blue="0.36534529919999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </label>
                             </items>
-                            <color key="backgroundColor" red="0.98039215690000003" green="0.066666666669999999" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </group>
                         <label alignment="center" verticalAlignment="center" text="Welcome to the Field Museum!" numberOfLines="2" id="jGd-4e-mKp"/>
                     </items>
@@ -38,18 +42,33 @@
             <objects>
                 <controller identifier="ExhibitPrompts" id="T1Z-ID-I6O" customClass="PromptInterfaceController" customModule="FieldGuide_WatchKit_Extension">
                     <items>
-                        <group width="134" height="40" alignment="left" id="FOI-wl-RER">
+                        <group width="1" height="53" alignment="left" spacing="2" id="FOI-wl-RER">
                             <items>
-                                <imageView width="40" height="40" alignment="left" id="pOL-8X-VOr"/>
-                                <label alignment="left" verticalAlignment="center" text="Hall Name" numberOfLines="2" id="9Kd-D6-ZDf">
-                                    <fontDescription key="font" type="system" pointSize="12"/>
-                                </label>
+                                <group width="45" height="45" alignment="left" verticalAlignment="center" radius="10" spacing="2" id="U4y-ME-zcr">
+                                    <items>
+                                        <imageView width="35" height="35" alignment="center" verticalAlignment="center" contentMode="scaleAspectFill" animationDuration="1" id="pOL-8X-VOr">
+                                            <color key="tintColor" red="0.95281940700000001" green="0.54311341049999995" blue="0.36534529919999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </imageView>
+                                    </items>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </group>
+                                <group width="89" height="60" alignment="right" layout="vertical" spacing="2" id="Dt2-TI-fKl">
+                                    <items>
+                                        <label alignment="left" verticalAlignment="bottom" text="Hall Name" textAlignment="center" id="9Kd-D6-ZDf">
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="font" type="system" pointSize="10"/>
+                                        </label>
+                                        <label alignment="left" text="Header" numberOfLines="3" id="riI-QK-Pzj">
+                                            <color key="textColor" red="0.95281940700000001" green="0.54311341049999995" blue="0.36534529919999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="font" type="system" weight="medium" pointSize="12"/>
+                                        </label>
+                                    </items>
+                                    <edgeInsets key="margins" left="3" right="0.0" top="2" bottom="2"/>
+                                </group>
                             </items>
-                            <color key="backgroundColor" red="0.97620397806167603" green="0.18670663237571716" blue="0.38073194026947021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="0.85286343917404561" green="0.8635156647368879" blue="0.87197917155202875" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <edgeInsets key="margins" left="3" right="0.0" top="0.0" bottom="0.0"/>
                         </group>
-                        <label alignment="left" text="Header" numberOfLines="3" id="riI-QK-Pzj">
-                            <fontDescription key="font" type="boldSystem" pointSize="12"/>
-                        </label>
                         <label alignment="left" text="Prompt" numberOfLines="3" id="MMV-O1-eEh">
                             <fontDescription key="font" type="system" pointSize="14"/>
                         </label>
@@ -76,9 +95,11 @@
                     <items>
                         <group width="1" alignment="left" id="Wds-Pe-aGR">
                             <items>
-                                <label alignment="center" text="Look for the exhibit case with this icon!" textAlignment="center" numberOfLines="3" id="mYi-d4-peR"/>
+                                <label alignment="center" text="Look for the exhibit case with this icon!" textAlignment="center" numberOfLines="3" id="mYi-d4-peR">
+                                    <color key="textColor" red="0.95281940700000001" green="0.54311341049999995" blue="0.36534529919999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </label>
                             </items>
-                            <color key="backgroundColor" red="0.97620397810000004" green="0.18670663239999999" blue="0.38073194030000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <edgeInsets key="margins" left="0.0" right="0.0" top="2" bottom="2"/>
                         </group>
                         <imageView alignment="left" verticalAlignment="center" id="q4K-Jg-nf3">
@@ -101,10 +122,11 @@
                             <items>
                                 <imageView width="40" height="40" alignment="left" id="zKu-fd-rmq"/>
                                 <label alignment="left" verticalAlignment="center" text="Hall Name" numberOfLines="2" id="8AR-ba-jgu">
+                                    <color key="textColor" red="0.95281940700000001" green="0.54311341049999995" blue="0.36534529919999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="font" type="system" pointSize="12"/>
                                 </label>
                             </items>
-                            <color key="backgroundColor" red="0.97620397810000004" green="0.18670663239999999" blue="0.38073194030000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </group>
                         <label alignment="left" text="Prompt" numberOfLines="3" id="tSd-h6-hyR">
                             <fontDescription key="font" type="system" pointSize="14"/>
@@ -133,9 +155,11 @@
                     <items>
                         <group width="134" alignment="left" verticalAlignment="center" id="MiL-Cz-4fN">
                             <items>
-                                <label width="119" alignment="center" verticalAlignment="center" text="Look for Exhibit Case #203!" textAlignment="center" numberOfLines="3" id="JTp-wk-N42"/>
+                                <label width="119" alignment="center" verticalAlignment="center" text="Look for Exhibit Case #203!" textAlignment="center" numberOfLines="3" id="JTp-wk-N42">
+                                    <color key="textColor" red="0.95281940700000001" green="0.54311341049999995" blue="0.36534529919999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </label>
                             </items>
-                            <color key="backgroundColor" red="0.97620397810000004" green="0.18670663239999999" blue="0.38073194030000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <edgeInsets key="margins" left="0.0" right="0.0" top="2" bottom="2"/>
                         </group>
                         <label alignment="left" id="CbD-8f-gMD"/>
@@ -152,10 +176,11 @@
                         <group width="1" alignment="left" id="VXR-zd-lRs">
                             <items>
                                 <label alignment="center" text="You are now connected to the exhibit" textAlignment="center" numberOfLines="3" id="pxR-e0-czC">
+                                    <color key="textColor" red="0.95281940700000001" green="0.54311341049999995" blue="0.36534529919999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="font" type="system" pointSize="15"/>
                                 </label>
                             </items>
-                            <color key="backgroundColor" red="0.97620397810000004" green="0.18670663239999999" blue="0.38073194030000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <edgeInsets key="margins" left="0.0" right="0.0" top="2" bottom="2"/>
                         </group>
                         <imageView width="80" height="72" alignment="center" image="Connected" contentMode="scaleAspectFit" id="LNJ-YG-tY4">
@@ -177,10 +202,11 @@
                         <group width="1" alignment="left" id="emI-BG-gWV">
                             <items>
                                 <label alignment="left" verticalAlignment="center" text="New information has been collected and stored on your phone!" textAlignment="center" numberOfLines="5" id="uJH-O2-JgY">
+                                    <color key="textColor" red="0.95281940700000001" green="0.54311341049999995" blue="0.36534529919999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="font" type="system" pointSize="16"/>
                                 </label>
                             </items>
-                            <color key="backgroundColor" red="0.97620397810000004" green="0.18670663239999999" blue="0.38073194030000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
                         </group>
                     </items>

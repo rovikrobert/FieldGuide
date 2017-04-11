@@ -13,7 +13,7 @@ class GuideCaseNumberControllerInterface: WKInterfaceController, WCSessionDelega
     
     var prompt: Prompt? {
         didSet {
-            if let prompt = prompt {
+            if prompt != nil {
                 
             }
         }
@@ -63,4 +63,5 @@ class GuideCaseNumberControllerInterface: WKInterfaceController, WCSessionDelega
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
+    
 }

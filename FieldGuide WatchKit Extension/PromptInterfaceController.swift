@@ -39,8 +39,7 @@ class PromptInterfaceController: WKInterfaceController, WCSessionDelegate {
                 Header.setText(prompt.header)
                 Area.setText(prompt.area)
                 PromptText.setText(prompt.promptText)
-                ItemImage.setImageNamed("Artifact")
-            }
+                ItemImage.setImage(UIImage(named: prompt.itemImgName))            }
         }
     }
     

@@ -16,7 +16,7 @@ class CompassInterfaceController: WKInterfaceController, WCSessionDelegate {
     
     var prompt: Prompt? {
         didSet {
-            if let prompt = prompt {
+            if prompt != nil {
                 compassImage.setImageNamed("Arrow")
                 
             }
