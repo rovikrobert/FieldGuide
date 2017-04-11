@@ -22,7 +22,8 @@ class atRailInterfaceController: WKInterfaceController, WCSessionDelegate {
             if let prompt = prompt {
                 hallName.setText(prompt.area)
                 promptText.setText(prompt.promptText)
-                itemImg.setImageNamed("Artifact")
+                itemImg.setImageNamed(prompt.itemImgName)
+                railImg.setImageNamed("watchtorail")
             }
         }
     }
