@@ -23,7 +23,11 @@ class atRailInterfaceController: WKInterfaceController, WCSessionDelegate {
                 hallName.setText(prompt.area)
                 promptText.setText(prompt.promptText)
                 itemImg.setImageNamed(prompt.itemImgName)
-                railImg.setImageNamed("watchtorail")
+                //railImg.setImageNamed("watchtorail")
+                
+                railImg.setImageNamed("animation")
+                //railImg.startAnimatingWithImages(in: NSMakeRange(0, 30), duration: 2, repeatCount: -1)
+                railImg.startAnimating()
             }
         }
     }
