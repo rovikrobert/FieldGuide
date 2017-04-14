@@ -30,7 +30,6 @@ class ViewController: UIViewController, WCSessionDelegate {
     }
 
     @IBAction func arriveAtRail(_ sender: UIButton) {
-        print("arrived at rail")
         setWatchFlag()
         
         if WCSession.default().isReachable == true {

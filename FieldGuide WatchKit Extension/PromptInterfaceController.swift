@@ -37,7 +37,7 @@ class PromptInterfaceController: WKInterfaceController, WCSessionDelegate {
         didSet {
             if let prompt = prompt {
                 Header.setText(prompt.header)
-                Area.setText(prompt.area)
+                //Area.setText(prompt.area)
                 PromptText.setText(prompt.promptText)
                 //ItemImage.setImage(UIImage(named: prompt.itemImgName))
                 ItemImage.setImageNamed(prompt.itemImgName)

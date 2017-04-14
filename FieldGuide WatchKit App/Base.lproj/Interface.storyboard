@@ -9,25 +9,40 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12029"/>
     </dependencies>
     <scenes>
-        <!--Museum-->
+        <!--Field Guide-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller identifier="Museum" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="FieldGuide_WatchKit_App" customModuleProvider="target">
+                <controller identifier="Museum" title="Field Guide" alwaysBounce="YES" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="FieldGuide_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <group width="1" alignment="left" id="Hzm-Lq-kws">
+                        <group width="1" height="140" alignment="left" layout="vertical" id="Hzm-Lq-kws">
                             <items>
-                                <imageView width="40" height="40" alignment="left" animationDuration="1" id="5j3-wY-bkB">
-                                    <color key="tintColor" red="0.95281940700000001" green="0.54311341049999995" blue="0.36534529919999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </imageView>
-                                <label height="20" alignment="center" verticalAlignment="center" text="FieldGuide" textAlignment="justified" id="y70-k4-mIL">
-                                    <color key="textColor" red="0.95281940700000001" green="0.54311341049999995" blue="0.36534529919999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </label>
+                                <group width="50" height="50" alignment="center" verticalAlignment="center" radius="14" id="cxb-Vh-Did">
+                                    <items>
+                                        <imageView width="30" height="30" alignment="center" verticalAlignment="center" image="field icon" contentMode="scaleAspectFit" animationDuration="1" id="5j3-wY-bkB"/>
+                                    </items>
+                                    <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                </group>
+                                <group width="1" alignment="left" verticalAlignment="bottom" layout="vertical" id="EHW-Xp-NHr">
+                                    <items>
+                                        <separator width="110" alignment="center" verticalAlignment="center" id="0q5-sC-iCa">
+                                            <color key="color" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </separator>
+                                        <label height="20" alignment="center" text="Field Guide" textAlignment="justified" id="y70-k4-mIL">
+                                            <color key="textColor" red="0.97395366430282593" green="0.45054513216018677" blue="0.12767776846885681" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="font" type="system" weight="medium" pointSize="16"/>
+                                        </label>
+                                        <label alignment="center" verticalAlignment="center" text="Welcome to China Hall" textAlignment="center" numberOfLines="2" id="jGd-4e-mKp">
+                                            <color key="textColor" red="0.28235294119999998" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="font" type="system" pointSize="17"/>
+                                        </label>
+                                    </items>
+                                    <edgeInsets key="margins" left="0.0" right="0.0" top="3" bottom="3"/>
+                                </group>
                             </items>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </group>
-                        <label alignment="center" verticalAlignment="center" text="Welcome to the Field Museum!" numberOfLines="2" id="jGd-4e-mKp"/>
                     </items>
-                    <edgeInsets key="margins" left="1" right="0.0" top="6" bottom="0.0"/>
                     <connections>
                         <outlet property="HomeTitleLabel" destination="y70-k4-mIL" id="2aj-aB-Utn"/>
                         <outlet property="HomeTitleLogo" destination="5j3-wY-bkB" id="BtW-BP-oOT"/>
@@ -35,64 +50,61 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="310" y="345"/>
         </scene>
         <!--ExhibitPrompts-->
         <scene sceneID="CUz-Bd-QAH">
             <objects>
                 <controller identifier="ExhibitPrompts" id="T1Z-ID-I6O" customClass="PromptInterfaceController" customModule="FieldGuide_WatchKit_Extension">
                     <items>
-                        <group width="1" height="53" alignment="left" spacing="2" id="FOI-wl-RER">
+                        <group width="1" height="140" alignment="left" layout="vertical" radius="6" spacing="2" id="FOI-wl-RER">
                             <items>
-                                <group width="45" height="45" alignment="left" verticalAlignment="center" radius="10" spacing="2" id="U4y-ME-zcr">
+                                <group width="1" height="45" alignment="left" radius="6" spacing="2" id="U4y-ME-zcr">
                                     <items>
-                                        <imageView width="35" height="35" alignment="center" verticalAlignment="center" contentMode="scaleAspectFill" animationDuration="1" id="pOL-8X-VOr">
-                                            <color key="tintColor" red="0.95281940700000001" green="0.54311341049999995" blue="0.36534529919999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </imageView>
-                                    </items>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </group>
-                                <group width="89" height="60" alignment="right" layout="vertical" spacing="2" id="Dt2-TI-fKl">
-                                    <items>
-                                        <label alignment="left" verticalAlignment="bottom" text="Hall Name" textAlignment="center" id="9Kd-D6-ZDf">
-                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                            <fontDescription key="font" type="system" pointSize="10"/>
+                                        <label alignment="center" verticalAlignment="center" text="Header" numberOfLines="3" id="riI-QK-Pzj">
+                                            <color key="textColor" red="0.28221294279999998" green="0.28631031509999999" blue="0.28628185389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
                                         </label>
-                                        <label alignment="left" text="Header" numberOfLines="3" id="riI-QK-Pzj">
-                                            <color key="textColor" red="0.95281940700000001" green="0.54311341049999995" blue="0.36534529919999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <group width="40" height="40" alignment="left" verticalAlignment="center" radius="4" id="VlK-zm-Cfx">
+                                            <items>
+                                                <imageView width="35" height="35" alignment="center" verticalAlignment="center" contentMode="scaleAspectFill" animationDuration="1" id="pOL-8X-VOr"/>
+                                            </items>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                        </group>
+                                    </items>
+                                    <color key="backgroundColor" red="0.82249190449999998" green="0.83623840709999997" blue="0.8374565491" alpha="1" colorSpace="calibratedRGB"/>
+                                    <edgeInsets key="margins" left="2" right="0.0" top="0.0" bottom="0.0"/>
+                                </group>
+                                <group width="1" height="93" alignment="left" layout="vertical" id="E66-c6-ZA3">
+                                    <items>
+                                        <label alignment="left" text="Prompt" textAlignment="left" numberOfLines="3" id="MMV-O1-eEh">
+                                            <color key="textColor" red="0.28221294279999998" green="0.28631031509999999" blue="0.28628185389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                        </label>
+                                        <button width="86" alignment="center" verticalAlignment="bottom" title="Know more?" id="V8k-5o-yfo">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" red="0.97395366429999997" green="0.45054513219999998" blue="0.12767776850000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="font" type="system" weight="medium" pointSize="12"/>
-                                        </label>
+                                            <connections>
+                                                <action selector="goToCompass" destination="T1Z-ID-I6O" id="agt-8y-alf"/>
+                                            </connections>
+                                        </button>
                                     </items>
-                                    <edgeInsets key="margins" left="3" right="3" top="2" bottom="2"/>
+                                    <edgeInsets key="margins" left="2" right="2" top="0.0" bottom="5"/>
                                 </group>
                             </items>
-                            <color key="backgroundColor" red="0.85286343917404561" green="0.8635156647368879" blue="0.87197917155202875" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <edgeInsets key="margins" left="3" right="0.0" top="0.0" bottom="0.0"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </group>
-                        <group width="1" alignment="left" id="KWw-iZ-e1L">
-                            <items>
-                                <label alignment="left" text="Prompt" numberOfLines="3" id="MMV-O1-eEh">
-                                    <fontDescription key="font" type="system" pointSize="14"/>
-                                </label>
-                            </items>
-                            <edgeInsets key="margins" left="3" right="3" top="0.0" bottom="0.0"/>
-                        </group>
-                        <button width="1" alignment="left" verticalAlignment="bottom" title="Wish to know more?" id="V8k-5o-yfo">
-                            <fontDescription key="font" type="system" pointSize="12"/>
-                            <connections>
-                                <action selector="goToCompass" destination="T1Z-ID-I6O" id="agt-8y-alf"/>
-                            </connections>
-                        </button>
                     </items>
                     <connections>
-                        <outlet property="Area" destination="9Kd-D6-ZDf" id="ypu-el-uSB"/>
                         <outlet property="Header" destination="riI-QK-Pzj" id="idq-by-tub"/>
                         <outlet property="ItemImage" destination="pOL-8X-VOr" id="Vf3-Az-uPR"/>
                         <outlet property="PromptText" destination="MMV-O1-eEh" id="QeG-QU-7en"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="463" y="340"/>
+            <point key="canvasLocation" x="609" y="345"/>
         </scene>
         <!--GuideCaseLogo-->
         <scene sceneID="69L-Wm-Y4x">
@@ -117,7 +129,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="455" y="620"/>
+            <point key="canvasLocation" x="879" y="620"/>
         </scene>
         <!--atRail-->
         <scene sceneID="wD4-Jb-TBY">
@@ -161,29 +173,29 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="794" y="620"/>
+            <point key="canvasLocation" x="609" y="620"/>
         </scene>
         <!--GuideCaseNum-->
         <scene sceneID="lyd-aD-fhm">
             <objects>
                 <controller identifier="GuideCaseNum" id="1gC-3m-cxh" customClass="GuideCaseNumberControllerInterface" customModule="FieldGuide_WatchKit_Extension">
                     <items>
+                        <label alignment="left" id="CbD-8f-gMD"/>
                         <group width="134" height="147" alignment="left" layout="vertical" id="MiL-Cz-4fN">
                             <items>
-                                <imageView width="1" height="80" alignment="center" image="rail" id="IBo-i2-Yoy"/>
-                                <label width="119" alignment="center" verticalAlignment="center" text="Look for Exhibit Case #201!" textAlignment="center" numberOfLines="3" id="JTp-wk-N42">
-                                    <color key="textColor" red="0.95281940700000001" green="0.54311341049999995" blue="0.36534529919999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <imageView width="1" height="80" alignment="center" image="screen" contentMode="scaleAspectFit" id="IBo-i2-Yoy"/>
+                                <label width="119" alignment="center" verticalAlignment="center" text="Find the screen with the orange panel on top." textAlignment="center" numberOfLines="3" id="JTp-wk-N42">
+                                    <color key="textColor" red="0.28221294279999998" green="0.28631031509999999" blue="0.28628185389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="font" type="system" pointSize="14"/>
                                 </label>
                             </items>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <edgeInsets key="margins" left="2" right="2" top="2" bottom="2"/>
                         </group>
-                        <label alignment="left" id="CbD-8f-gMD"/>
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="620"/>
+            <point key="canvasLocation" x="310" y="620"/>
         </scene>
         <!--ConnectedScreen-->
         <scene sceneID="vt2-Yc-i8Y">
@@ -209,7 +221,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="216" y="908"/>
+            <point key="canvasLocation" x="310" y="926"/>
         </scene>
         <!--CollectedScreen-->
         <scene sceneID="A9L-ZH-MhL">
@@ -229,7 +241,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="467" y="943"/>
+            <point key="canvasLocation" x="609" y="909"/>
         </scene>
     </scenes>
 </document>
