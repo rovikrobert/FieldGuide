@@ -10,10 +10,10 @@
 		08539BA61E9CC05B0027369A /* Prompts.json in Resources */ = {isa = PBXBuildFile; fileRef = 08539BA41E9CC05B0027369A /* Prompts.json */; };
 		08539BA71E9CC2B50027369A /* Prompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08539BA31E9CC05B0027369A /* Prompt.swift */; };
 		08539BA81E9CC36B0027369A /* Prompts.json in Resources */ = {isa = PBXBuildFile; fileRef = 08539BA41E9CC05B0027369A /* Prompts.json */; };
+		086DC0701EA210B300247A2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B4D7EFC1E5FD75A00F285FF /* Assets.xcassets */; };
 		5B4D7EF61E5FD75A00F285FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D7EF51E5FD75A00F285FF /* AppDelegate.swift */; };
 		5B4D7EF81E5FD75A00F285FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D7EF71E5FD75A00F285FF /* ViewController.swift */; };
 		5B4D7EFB1E5FD75A00F285FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B4D7EF91E5FD75A00F285FF /* Main.storyboard */; };
-		5B4D7EFD1E5FD75A00F285FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B4D7EFC1E5FD75A00F285FF /* Assets.xcassets */; };
 		5B4D7F001E5FD75A00F285FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B4D7EFE1E5FD75A00F285FF /* LaunchScreen.storyboard */; };
 		5B4D7F0B1E5FD75B00F285FF /* FieldGuideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D7F0A1E5FD75B00F285FF /* FieldGuideTests.swift */; };
 		5B4D7F101E5FD75B00F285FF /* FieldGuide WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 5B4D7F0F1E5FD75B00F285FF /* FieldGuide WatchKit App.app */; };
@@ -362,9 +362,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				086DC0701EA210B300247A2A /* Assets.xcassets in Resources */,
 				5B4D7F001E5FD75A00F285FF /* LaunchScreen.storyboard in Resources */,
 				08539BA61E9CC05B0027369A /* Prompts.json in Resources */,
-				5B4D7EFD1E5FD75A00F285FF /* Assets.xcassets in Resources */,
 				5B4D7EFB1E5FD75A00F285FF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
