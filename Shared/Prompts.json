@@ -5,6 +5,7 @@
  "promptText": "How did the King talk to the dead?",
  "item": "Map",
  "imgName":"future",
+ "itemID":"0",
   },
  {
  "area" : "China Hall 201",
@@ -12,6 +13,7 @@
  "promptText": "Why were shells used as money?",
  "item": "Map",
  "imgName":"shellpayment",
+ "itemID":"1",
  },
  {
  "area" : "China Hall 201",
@@ -19,5 +21,6 @@
  "promptText": "How have Chinese characters evolved over time?",
  "item": "Map",
  "imgName":"scribbles",
+ "itemID":"2",
  },
 ]

@@ -106,9 +106,7 @@ class ViewController: UIViewController, WCSessionDelegate {
     
     //sets the flag to show/hide the watch area on the digital rail
     func setWatchFlag() {
-        print("setting watch status")
-        
-        var request = URLRequest(url: URL(string: "http://www.digitalrail.xyz/setwatchstatus/")!)
+        var request = URLRequest(url: URL(string: "http://127.0.0.1:8000/setwatchstatus/")!)
         request.httpMethod = "POST"
         let params = ["name": "ios"] as Dictionary<String, String>
         

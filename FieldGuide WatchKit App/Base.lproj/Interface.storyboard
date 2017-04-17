@@ -106,78 +106,36 @@
             </objects>
             <point key="canvasLocation" x="609" y="345"/>
         </scene>
-        <!--GuideCaseLogo-->
-        <scene sceneID="69L-Wm-Y4x">
-            <objects>
-                <controller identifier="GuideCaseLogo" id="IVQ-yL-XwO" customClass="CompassInterfaceController" customModule="FieldGuide_WatchKit_Extension">
-                    <items>
-                        <group width="1" alignment="left" id="Wds-Pe-aGR">
-                            <items>
-                                <label alignment="center" text="Look for the exhibit case with this icon!" textAlignment="center" numberOfLines="3" id="mYi-d4-peR">
-                                    <color key="textColor" red="0.95281940700000001" green="0.54311341049999995" blue="0.36534529919999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </label>
-                            </items>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <edgeInsets key="margins" left="0.0" right="0.0" top="2" bottom="2"/>
-                        </group>
-                        <imageView alignment="left" verticalAlignment="center" id="q4K-Jg-nf3">
-                            <color key="tintColor" red="0.97620397810000004" green="0.18670663239999999" blue="0.38073194030000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </imageView>
-                    </items>
-                    <connections>
-                        <outlet property="compassImage" destination="q4K-Jg-nf3" id="bgX-dY-9Ov"/>
-                    </connections>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="879" y="620"/>
-        </scene>
         <!--atRail-->
         <scene sceneID="wD4-Jb-TBY">
             <objects>
                 <controller identifier="atRail" id="0us-vv-IyP" customClass="atRailInterfaceController" customModule="FieldGuide_WatchKit_Extension">
                     <items>
-                        <group width="1" height="140" alignment="left" layout="vertical" id="pXz-8Y-Csb">
-                            <items>
-                                <label alignment="left" text="Prompt" numberOfLines="3" id="tSd-h6-hyR">
-                                    <color key="textColor" red="0.28221294279999998" green="0.28631031509999999" blue="0.28628185389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
-                                </label>
-                                <group width="1" height="45" alignment="left" hidden="YES" radius="6" id="94o-CG-qlr">
-                                    <items>
-                                        <group width="40" height="40" alignment="left" verticalAlignment="center" hidden="YES" radius="6" id="Uhl-kY-plU">
-                                            <items>
-                                                <imageView width="35" height="35" alignment="center" verticalAlignment="center" id="zKu-fd-rmq"/>
-                                            </items>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </group>
-                                        <label alignment="left" verticalAlignment="center" hidden="YES" text="Hall Name" numberOfLines="2" id="8AR-ba-jgu">
-                                            <color key="textColor" red="0.28221294279999998" green="0.28631031509999999" blue="0.28628185389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
-                                        </label>
-                                    </items>
-                                    <color key="backgroundColor" red="0.85054641962051392" green="0.86269956827163696" blue="0.87094050645828247" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <edgeInsets key="margins" left="5" right="3" top="0.0" bottom="0.0"/>
-                                </group>
-                                <group width="1" alignment="left" layout="vertical" id="165-p4-MOs">
-                                    <items>
-                                        <imageView width="40" height="40" alignment="center" contentMode="scaleAspectFit" id="Feb-ss-y47"/>
-                                    </items>
-                                    <edgeInsets key="margins" left="3" right="3" top="0.0" bottom="0.0"/>
-                                </group>
-                                <label alignment="center" text="Tap on the exhibit screen" id="dnh-1Q-gGK">
-                                    <color key="textColor" red="0.28221294279999998" green="0.28631031509999999" blue="0.28628185389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <fontDescription key="font" type="system" weight="medium" pointSize="10"/>
-                                </label>
-                            </items>
-                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <edgeInsets key="margins" left="5" right="5" top="5" bottom="0.0"/>
-                        </group>
+                        <button alignment="left" accessibilityLabel="label" id="QMe-tu-bt1" userLabel="atRailButton">
+                            <group key="contentGroup" width="1" height="140" alignment="left" layout="vertical" id="bCe-rg-fTy">
+                                <items>
+                                    <label alignment="left" text="Prompt" numberOfLines="3" id="tSd-h6-hyR">
+                                        <color key="textColor" red="0.28221294279999998" green="0.28631031509999999" blue="0.28628185389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                    </label>
+                                    <imageView width="60" height="60" alignment="center" verticalAlignment="center" image="Circle" contentMode="scaleAspectFit" id="Feb-ss-y47"/>
+                                    <label alignment="center" verticalAlignment="bottom" text="Tap on the exhibit screen" textAlignment="center" numberOfLines="2" id="dnh-1Q-gGK">
+                                        <accessibilityTraits key="accessibilityTraits" button="YES" staticText="YES"/>
+                                        <color key="textColor" red="0.28221294279999998" green="0.28631031509999999" blue="0.28628185389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="font" type="system" pointSize="11"/>
+                                    </label>
+                                </items>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <edgeInsets key="margins" left="5" right="5" top="5" bottom="5"/>
+                            </group>
+                            <connections>
+                                <action selector="connectToRail" destination="0us-vv-IyP" id="OoK-se-aB7"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
-                        <outlet property="hallName" destination="8AR-ba-jgu" id="NPX-QY-Keo"/>
-                        <outlet property="itemImg" destination="zKu-fd-rmq" id="073-yU-9LD"/>
                         <outlet property="promptText" destination="tSd-h6-hyR" id="LoX-7Q-2ul"/>
-                        <outlet property="railImg" destination="Feb-ss-y47" id="h7t-N7-Reo"/>
+                        <outlet property="railImg" destination="Feb-ss-y47" id="WjR-Ml-VfL"/>
                     </connections>
                 </controller>
             </objects>
@@ -209,22 +167,17 @@
             <objects>
                 <controller identifier="ConnectedScreen" id="fCt-fD-JjI" customClass="ConnectedInterfaceController" customModule="FieldGuide_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="left" id="VXR-zd-lRs">
+                        <group width="1" height="140" alignment="left" layout="vertical" id="VXR-zd-lRs">
                             <items>
-                                <label alignment="center" text="You are now connected to the exhibit" textAlignment="center" numberOfLines="3" id="pxR-e0-czC">
-                                    <color key="textColor" red="0.95294117647058818" green="0.54117647058823526" blue="0.36470588235294116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <fontDescription key="font" type="system" pointSize="15"/>
+                                <imageView width="70" height="70" alignment="center" image="Connected" contentMode="scaleAspectFit" id="LNJ-YG-tY4"/>
+                                <label width="128" alignment="center" verticalAlignment="bottom" text="You are connected to the exhibit" textAlignment="center" numberOfLines="3" id="pxR-e0-czC">
+                                    <color key="textColor" red="0.28221294279999998" green="0.28631031509999999" blue="0.28628185389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
                                 </label>
                             </items>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <edgeInsets key="margins" left="0.0" right="0.0" top="2" bottom="2"/>
+                            <edgeInsets key="margins" left="5" right="5" top="7" bottom="10"/>
                         </group>
-                        <imageView width="80" height="72" alignment="center" image="Connected" contentMode="scaleAspectFit" id="LNJ-YG-tY4">
-                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </imageView>
-                        <label alignment="center" text="Simply walk away to return to previous screen" textAlignment="center" numberOfLines="3" id="rQC-N4-Sm7">
-                            <fontDescription key="font" type="system" pointSize="13"/>
-                        </label>
                     </items>
                 </controller>
             </objects>
@@ -235,20 +188,21 @@
             <objects>
                 <controller identifier="CollectedScreen" id="UkI-cj-IcH" customClass="CollectedInterfaceController" customModule="FieldGuide_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="left" id="emI-BG-gWV">
+                        <group width="1" height="140" alignment="left" layout="vertical" id="emI-BG-gWV">
                             <items>
-                                <label alignment="left" verticalAlignment="center" text="New information has been collected and stored on your phone!" textAlignment="center" numberOfLines="5" id="uJH-O2-JgY">
-                                    <color key="textColor" red="0.95281940700000001" green="0.54311341049999995" blue="0.36534529919999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <fontDescription key="font" type="system" pointSize="16"/>
+                                <imageView width="50" height="50" alignment="center" verticalAlignment="center" image="success" contentMode="scaleAspectFit" id="jlE-XB-mcP"/>
+                                <label width="120" alignment="center" verticalAlignment="center" text="Successfully saved the story you selected." textAlignment="center" numberOfLines="5" id="uJH-O2-JgY">
+                                    <color key="textColor" red="0.28221294279999998" green="0.28631031509999999" blue="0.28628185389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
                                 </label>
                             </items>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <edgeInsets key="margins" left="3" right="3" top="3" bottom="3"/>
+                            <edgeInsets key="margins" left="3" right="3" top="15" bottom="15"/>
                         </group>
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="609" y="909"/>
+            <point key="canvasLocation" x="609" y="926"/>
         </scene>
     </scenes>
 </document>

@@ -15,6 +15,7 @@ class Prompt {
     let promptText: String
     private let item: String
     let itemImgName: String
+    let itemID: String
 
   
   class func allPrompts() -> [Prompt] {
@@ -33,12 +34,13 @@ class Prompt {
     return prompts
   }
   
-    init(area: String, header: String, promptText: String, item: String, imgName: String) {
+    init(area: String, header: String, promptText: String, item: String, imgName: String, itemID: String) {
     self.area = area
     self.header = header
     self.promptText = promptText
     self.item = item
     self.itemImgName = imgName
+    self.itemID = itemID
   }
   
   convenience init(dictionary: [String: String]) {
@@ -47,7 +49,8 @@ class Prompt {
     let promptText = dictionary["promptText"]!
     let item = dictionary["item"]!
     let imgName = dictionary["imgName"]!
-    self.init(area: area, header: header, promptText: promptText, item: item, imgName: imgName)
+    let itemId = dictionary["itemID"]!
+    self.init(area: area, header: header, promptText: promptText, item: item, imgName: imgName, itemID: itemId)
   }
 
   

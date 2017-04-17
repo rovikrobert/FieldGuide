@@ -2,16 +2,8 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "animation482.png",
       "scale" : "1x"
-    },
-    {
-      "idiom" : "universal",
-      "filename" : "animation482@2x.png",
-      "scale" : "2x"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "3x"
     }
   ],
   "info" : {

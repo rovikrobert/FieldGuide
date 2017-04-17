@@ -35,16 +35,17 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         case "Exhibit" :
             replyValues["status"] = "Done"
             let promptcount = prompts.count
-            print(promptcount)
             
             var controllersNames = [String?](repeating: nil, count:promptcount)
-            var controllersContexts = [Prompt?](repeating: nil, count:promptcount)
+            var controllersContexts: [Prompt?] = [Prompt?](repeating: nil, count:promptcount)
+            
             if (promptcount>0) {
                 for i in 0...promptcount-1 {
                     controllersNames[i] = "ExhibitPrompts"
                     controllersContexts[i] = prompts[i]
                 }
             }
+            
             // reload base controller
             self.presentController(withNames: controllersNames as! [String], contexts: controllersContexts)
             WKInterfaceDevice.current().play(.notification)
