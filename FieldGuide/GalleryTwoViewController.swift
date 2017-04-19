@@ -1,41 +1,75 @@
 //
-//  ViewController.swift
+//  GalleryTwoViewController.swift
 //  FieldGuide
 //
-//  Created by SESP Walkup on 2/23/17.
+//  Created by SESP Walkup on 4/19/17.
 //  Copyright © 2017 SESP Walkup. All rights reserved.
 //
 
 import UIKit
 import WatchConnectivity
 
-class ViewController: UIViewController, WCSessionDelegate {
+class GalleryTwoViewController: UIViewController, WCSessionDelegate {
 
-    @IBOutlet weak var ExhibitStatus: UILabel!
-
+    @IBOutlet weak var CollectStatus: UILabel!
+    @IBOutlet weak var ConnectStatus: UILabel!
+    @IBOutlet weak var RailStatus: UILabel!
+    @IBOutlet weak var PromptStatus: UILabel!
+    @IBAction func toggleRailArea(_ sender: Any) {
+        setWatchFlag()
+    }
     
-    @IBAction func arriveAtExhibit(_ sender: UIButton) {
+    @IBAction func PromptOptions(_ sender: UIButton) {
+        
         if WCSession.default().isReachable == true {
-            let requestValues = ["command" : "GalleryOne"]
+            let requestValues = ["command" : "PromptOptions"]
             let session = WCSession.default()
             
             session.sendMessage(requestValues, replyHandler: { reply in
-                self.ExhibitStatus.text = reply["status"] as? String
+                self.PromptStatus.text = reply["status"] as? String
             }, errorHandler: { error in
                 print("error: \(error)")
             })
         }
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "GalleryOne") as UIViewController
-        present(vc, animated: true, completion: nil)
     }
-
-    /*@IBAction func arriveAtRail(_ sender: UIButton) {
-        print("arrived at rail")
+    
+    @IBAction func CancelOptions(_ sender: UIButton) {
+        
+        if WCSession.default().isReachable == true {
+            let requestValues = ["command" : "CancelOptions"]
+            let session = WCSession.default()
+            
+            session.sendMessage(requestValues, replyHandler: { reply in
+                self.PromptStatus.text = reply["status"] as? String
+            }, errorHandler: { error in
+                print("error: \(error)")
+            })
+        }
+    }
+    
+    
+    
+    @IBAction func arriveAtRail(_ sender: UIButton) {
+     print("arrived at rail")
+     setWatchFlag()
+     
+     if WCSession.default().isReachable == true {
+     let requestValues = ["command" : "Rail"]
+     let session = WCSession.default()
+     
+     session.sendMessage(requestValues, replyHandler: { reply in
+     self.RailStatus.text = reply["status"] as? String
+     }, errorHandler: { error in
+     print("error: \(error)")
+     })
+     }
+     }
+    
+    @IBAction func cancelRail(_ sender: UIButton) {
         setWatchFlag()
         
         if WCSession.default().isReachable == true {
-            let requestValues = ["command" : "Rail"]
+            let requestValues = ["command" : "CancelRail"]
             let session = WCSession.default()
             
             session.sendMessage(requestValues, replyHandler: { reply in
@@ -45,10 +79,25 @@ class ViewController: UIViewController, WCSessionDelegate {
             })
         }
     }
+     
+     @IBAction func connectToRail(_ sender: UIButton) {
+     if WCSession.default().isReachable == true {
+     let requestValues = ["command" : "Connect"]
+     let session = WCSession.default()
+     
+     session.sendMessage(requestValues, replyHandler: { reply in
+     self.ConnectStatus.text = reply["status"] as? String
+     }, errorHandler: { error in
+     print("error: \(error)")
+     })
+     }
+     }
     
-    @IBAction func connectToRail(_ sender: UIButton) {
+    @IBAction func cancelConnect(_ sender: UIButton) {
+        setWatchFlag()
+        
         if WCSession.default().isReachable == true {
-            let requestValues = ["command" : "Connect"]
+            let requestValues = ["command" : "CancelConnect"]
             let session = WCSession.default()
             
             session.sendMessage(requestValues, replyHandler: { reply in
@@ -57,15 +106,25 @@ class ViewController: UIViewController, WCSessionDelegate {
                 print("error: \(error)")
             })
         }
-    }*/
-    
-    @IBAction func toggleRailArea(_ sender: Any) {
-        setWatchFlag()
     }
     
-   /* @IBAction func collectInformation(_ sender: UIButton) {
+    @IBAction func collectInformation(_ sender: UIButton) {
+     if WCSession.default().isReachable == true {
+     let requestValues = ["command" : "Collect"]
+     let session = WCSession.default()
+     
+     session.sendMessage(requestValues, replyHandler: { reply in
+     self.CollectStatus.text = reply["status"] as? String
+     }, errorHandler: { error in
+     print("error: \(error)")
+     })
+     }}
+    
+    @IBAction func cancelCollect(_ sender: UIButton) {
+        setWatchFlag()
+        
         if WCSession.default().isReachable == true {
-            let requestValues = ["command" : "Collect"]
+            let requestValues = ["command" : "CancelCollect"]
             let session = WCSession.default()
             
             session.sendMessage(requestValues, replyHandler: { reply in
@@ -74,9 +133,8 @@ class ViewController: UIViewController, WCSessionDelegate {
                 print("error: \(error)")
             })
         }
-    }*/
-    
-    
+    }
+
     internal func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?){
     }
     
@@ -95,7 +153,10 @@ class ViewController: UIViewController, WCSessionDelegate {
             session.delegate = self
             session.activate()
         }
-        ExhibitStatus.text = ""
+        CollectStatus.text = ""
+        ConnectStatus.text = ""
+        PromptStatus.text = ""
+        RailStatus.text = ""
         
     }
 
@@ -104,6 +165,7 @@ class ViewController: UIViewController, WCSessionDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+
     //sets the flag to show/hide the watch area on the digital rail
     func setWatchFlag() {
         print("setting watch status")
@@ -135,6 +197,6 @@ class ViewController: UIViewController, WCSessionDelegate {
         }
         task.resume()
     }
-    
-}
 
+
+}

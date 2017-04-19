@@ -10,6 +10,10 @@
 		08539BA61E9CC05B0027369A /* Prompts.json in Resources */ = {isa = PBXBuildFile; fileRef = 08539BA41E9CC05B0027369A /* Prompts.json */; };
 		08539BA71E9CC2B50027369A /* Prompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08539BA31E9CC05B0027369A /* Prompt.swift */; };
 		08539BA81E9CC36B0027369A /* Prompts.json in Resources */ = {isa = PBXBuildFile; fileRef = 08539BA41E9CC05B0027369A /* Prompts.json */; };
+		5B3931EE1EA7975600DBE9DD /* GalleryOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3931ED1EA7975600DBE9DD /* GalleryOne.swift */; };
+		5B3931F21EA79C2300DBE9DD /* GalleryOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3931F11EA79C2300DBE9DD /* GalleryOne.swift */; };
+		5B3931F41EA79C5200DBE9DD /* GalleryTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3931F31EA79C5200DBE9DD /* GalleryTwo.swift */; };
+		5B3931F61EA79F0E00DBE9DD /* GalleryTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3931F51EA79F0E00DBE9DD /* GalleryTwoViewController.swift */; };
 		5B4D7EF61E5FD75A00F285FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D7EF51E5FD75A00F285FF /* AppDelegate.swift */; };
 		5B4D7EF81E5FD75A00F285FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D7EF71E5FD75A00F285FF /* ViewController.swift */; };
 		5B4D7EFB1E5FD75A00F285FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B4D7EF91E5FD75A00F285FF /* Main.storyboard */; };
@@ -84,6 +88,10 @@
 /* Begin PBXFileReference section */
 		08539BA31E9CC05B0027369A /* Prompt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prompt.swift; sourceTree = "<group>"; };
 		08539BA41E9CC05B0027369A /* Prompts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Prompts.json; sourceTree = "<group>"; };
+		5B3931ED1EA7975600DBE9DD /* GalleryOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryOne.swift; sourceTree = "<group>"; };
+		5B3931F11EA79C2300DBE9DD /* GalleryOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryOne.swift; sourceTree = "<group>"; };
+		5B3931F31EA79C5200DBE9DD /* GalleryTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryTwo.swift; sourceTree = "<group>"; };
+		5B3931F51EA79F0E00DBE9DD /* GalleryTwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryTwoViewController.swift; sourceTree = "<group>"; };
 		5B4D7EF21E5FD75900F285FF /* FieldGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FieldGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B4D7EF51E5FD75A00F285FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B4D7EF71E5FD75A00F285FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -179,6 +187,8 @@
 				5B4D7EFC1E5FD75A00F285FF /* Assets.xcassets */,
 				5B4D7EFE1E5FD75A00F285FF /* LaunchScreen.storyboard */,
 				5B4D7F011E5FD75A00F285FF /* Info.plist */,
+				5B3931ED1EA7975600DBE9DD /* GalleryOne.swift */,
+				5B3931F51EA79F0E00DBE9DD /* GalleryTwoViewController.swift */,
 			);
 			path = FieldGuide;
 			sourceTree = "<group>";
@@ -210,6 +220,8 @@
 				5B5369821E6CF4700026F533 /* GuideCaseNumberControllerInterface.swift */,
 				5B4D7F4C1E6332C900F285FF /* CompassInterfaceController.swift */,
 				5B4D7F251E5FD75B00F285FF /* InterfaceController.swift */,
+				5B3931F11EA79C2300DBE9DD /* GalleryOne.swift */,
+				5B3931F31EA79C5200DBE9DD /* GalleryTwo.swift */,
 				5B4D7F271E5FD75B00F285FF /* ExtensionDelegate.swift */,
 				5B4D7F291E5FD75B00F285FF /* NotificationController.swift */,
 				5B4D7F431E6093B200F285FF /* PromptInterfaceController.swift */,
@@ -315,7 +327,7 @@
 				TargetAttributes = {
 					5B4D7EF11E5FD75900F285FF = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = HL7S2EUM3A;
+						DevelopmentTeam = F6A442XU45;
 						ProvisioningStyle = Automatic;
 					};
 					5B4D7F051E5FD75B00F285FF = {
@@ -326,12 +338,13 @@
 					};
 					5B4D7F0E1E5FD75B00F285FF = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = HL7S2EUM3A;
+						DevelopmentTeam = F6A442XU45;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					5B4D7F1D1E5FD75B00F285FF = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = HL7S2EUM3A;
+						DevelopmentTeam = F6A442XU45;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -403,6 +416,8 @@
 			files = (
 				5B4D7EF81E5FD75A00F285FF /* ViewController.swift in Sources */,
 				5B4D7EF61E5FD75A00F285FF /* AppDelegate.swift in Sources */,
+				5B3931F61EA79F0E00DBE9DD /* GalleryTwoViewController.swift in Sources */,
+				5B3931EE1EA7975600DBE9DD /* GalleryOne.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,12 +434,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				08539BA71E9CC2B50027369A /* Prompt.swift in Sources */,
+				5B3931F41EA79C5200DBE9DD /* GalleryTwo.swift in Sources */,
 				5B4D7F2A1E5FD75B00F285FF /* NotificationController.swift in Sources */,
 				5B4D7F441E6093B200F285FF /* PromptInterfaceController.swift in Sources */,
 				5B5369871E6DD7900026F533 /* ConnectedInterfaceController.swift in Sources */,
 				5B5369891E6DD7C20026F533 /* CollectedInterfaceController.swift in Sources */,
 				5B4D7F511E63330B00F285FF /* atRailInterfaceController.swift in Sources */,
 				5B5369841E6CF4700026F533 /* GuideCaseNumberControllerInterface.swift in Sources */,
+				5B3931F21EA79C2300DBE9DD /* GalleryOne.swift in Sources */,
 				5B4D7F281E5FD75B00F285FF /* ExtensionDelegate.swift in Sources */,
 				5B4D7F261E5FD75B00F285FF /* InterfaceController.swift in Sources */,
 				5B4D7F4E1E6332C900F285FF /* CompassInterfaceController.swift in Sources */,
@@ -576,7 +593,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				DEVELOPMENT_TEAM = HL7S2EUM3A;
+				DEVELOPMENT_TEAM = F6A442XU45;
 				INFOPLIST_FILE = "FieldGuide WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "TIDAL-Lab.FieldGuide.watchkitapp.watchkitextension";
@@ -593,7 +610,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				DEVELOPMENT_TEAM = HL7S2EUM3A;
+				DEVELOPMENT_TEAM = F6A442XU45;
 				INFOPLIST_FILE = "FieldGuide WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "TIDAL-Lab.FieldGuide.watchkitapp.watchkitextension";
@@ -611,13 +628,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = HL7S2EUM3A;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = F6A442XU45;
 				IBSC_MODULE = FieldGuide_WatchKit_Extension;
 				INFOPLIST_FILE = "FieldGuide WatchKit App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "TIDAL-Lab.FieldGuide.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 3.1;
@@ -629,9 +649,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = HL7S2EUM3A;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = F6A442XU45;
 				IBSC_MODULE = FieldGuide_WatchKit_Extension;
 				INFOPLIST_FILE = "FieldGuide WatchKit App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "TIDAL-Lab.FieldGuide.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -646,7 +668,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = HL7S2EUM3A;
+				DEVELOPMENT_TEAM = F6A442XU45;
 				INFOPLIST_FILE = FieldGuide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "TIDAL-Lab.FieldGuide";
@@ -659,7 +681,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = HL7S2EUM3A;
+				DEVELOPMENT_TEAM = F6A442XU45;
 				INFOPLIST_FILE = FieldGuide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "TIDAL-Lab.FieldGuide";

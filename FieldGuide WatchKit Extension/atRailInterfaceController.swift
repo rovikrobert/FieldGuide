@@ -44,29 +44,33 @@ class atRailInterfaceController: WKInterfaceController, WCSessionDelegate {
         
         var replyValues = Dictionary<String, Any>()
         
-        
         switch message["command"] as! String {
         case "Connect" :
-            replyValues["status"] = "Done"
-        
+            replyValues["status"] = "Connected"
+            self.buzz()
             self.presentController(withNames: ["ConnectedScreen"], contexts: nil)
-            WKInterfaceDevice.current().play(.notification)
-            WKInterfaceDevice.current().play(.notification)
-        case "Exhibit" :
-            replyValues["status"] = "Done"
-            
+        case "CancelRail" :
+            replyValues["status"] = "Dismissed"
             self.dismiss()
-            WKInterfaceDevice.current().play(.notification)
         default:
             break
         }
         replyHandler(replyValues)
     }
 
+    func buzz(){
+        WKInterfaceDevice.current().play(.notification)
+        WKInterfaceDevice.current().play(.notification)
+        WKInterfaceDevice.current().play(.notification)
+    }
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        hallName.setText("China Hall 201")
+        promptText.setText("Artifacts")
+        itemImg.setImageNamed("scribbles")
+        railImg.setImageNamed("watchtorail")
         if (WCSession.isSupported()) {
             let session = WCSession.default()
             session.delegate = self

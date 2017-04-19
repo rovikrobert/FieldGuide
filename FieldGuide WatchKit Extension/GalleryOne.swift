@@ -1,8 +1,8 @@
 //
-//  InterfaceController.swift
-//  FieldGuide WatchKit Extension
+//  GalleryOne.swift
+//  FieldGuide
 //
-//  Created by SESP Walkup on 2/23/17.
+//  Created by SESP Walkup on 4/19/17.
 //  Copyright © 2017 SESP Walkup. All rights reserved.
 //
 
@@ -11,9 +11,8 @@ import Foundation
 import WatchConnectivity
 
 
-class InterfaceController: WKInterfaceController, WCSessionDelegate {
+class GalleryOne: WKInterfaceController,WCSessionDelegate {
 
-    
     @IBOutlet var HomeTitleLabel: WKInterfaceLabel!
     
     @IBOutlet var HomeWelcomeText: WKInterfaceLabel!
@@ -31,9 +30,9 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         
         
         switch message["command"] as! String {
-        case "GalleryOne" :
+        case "GalleryTwo" :
             replyValues["status"] = "Done"
-            self.pushController(withName: "GalleryOne", context: nil)
+            self.pushController(withName: "GalleryTwo", context: nil)
             self.buzz()
         default:
             break
@@ -57,7 +56,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         }
         
         HomeTitleLogo.setImageNamed("Logo")
-
+        
     }
     
     internal func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?){
@@ -69,4 +68,3 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     }
 
 }
-

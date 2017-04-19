@@ -46,14 +46,23 @@ class GuideCaseNumberControllerInterface: WKInterfaceController, WCSessionDelega
         
         switch message["command"] as! String {
         case "Rail" :
-            replyValues["status"] = "Done"
+            replyValues["status"] = "atRail"
             // reload base controller
+            self.buzz()
             self.presentController(withName: "atRail", context: self.prompt)
-            WKInterfaceDevice.current().play(.notification)
+        case "CancelOptions" :
+            replyValues["status"] = "Dismissed"
+            self.dismiss()
         default:
             break
         }
         replyHandler(replyValues)
+    }
+    
+    func buzz(){
+        WKInterfaceDevice.current().play(.notification)
+        WKInterfaceDevice.current().play(.notification)
+        WKInterfaceDevice.current().play(.notification)
     }
     
     internal func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?){

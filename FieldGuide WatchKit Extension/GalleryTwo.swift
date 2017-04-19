@@ -1,8 +1,8 @@
 //
-//  InterfaceController.swift
-//  FieldGuide WatchKit Extension
+//  GalleryTwo.swift
+//  FieldGuide
 //
-//  Created by SESP Walkup on 2/23/17.
+//  Created by SESP Walkup on 4/19/17.
 //  Copyright © 2017 SESP Walkup. All rights reserved.
 //
 
@@ -11,8 +11,9 @@ import Foundation
 import WatchConnectivity
 
 
-class InterfaceController: WKInterfaceController, WCSessionDelegate {
+class GalleryTwo: WKInterfaceController,WCSessionDelegate {
 
+    var prompts = Prompt.allPrompts()
     
     @IBOutlet var HomeTitleLabel: WKInterfaceLabel!
     
@@ -31,10 +32,30 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         
         
         switch message["command"] as! String {
-        case "GalleryOne" :
-            replyValues["status"] = "Done"
-            self.pushController(withName: "GalleryOne", context: nil)
+        case "PromptOptions" :
+            replyValues["status"] = "Prompted"
+            let promptcount = prompts.count
+            print(promptcount)
+            
+            var controllersNames = [String?](repeating: nil, count:promptcount)
+            var controllersContexts = [Prompt?](repeating: nil, count:promptcount)
+            if (promptcount>0) {
+                for i in 0...promptcount-1 {
+                    controllersNames[i] = "ExhibitPrompts"
+                    controllersContexts[i] = prompts[i]
+                }
+            }
+            // reload base controller
             self.buzz()
+            self.presentController(withNames: controllersNames as! [String], contexts: controllersContexts)
+        case "Rail" :
+            replyValues["status"] = "atRail"
+            self.buzz()
+            self.presentController(withName: "atRail", context: nil)
+        case "Connect" :
+            replyValues["status"] = "Connected"
+            self.buzz()
+            self.presentController(withName: "ConnectedScreen", context: nil)
         default:
             break
         }
@@ -57,7 +78,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         }
         
         HomeTitleLogo.setImageNamed("Logo")
-
+        
     }
     
     internal func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?){
@@ -69,4 +90,3 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     }
 
 }
-

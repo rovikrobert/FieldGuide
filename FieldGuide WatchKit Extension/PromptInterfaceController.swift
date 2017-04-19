@@ -46,9 +46,25 @@ class PromptInterfaceController: WKInterfaceController, WCSessionDelegate {
     }
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
+        var replyValues = Dictionary<String, Any>()
+        
+        
+        switch message["command"] as! String {
+        case "CancelOptions" :
+            replyValues["status"] = "Dismissed"
+            self.dismiss()
+        default:
+            break
+        }
+        replyHandler(replyValues)
     }
 
-    
+    func buzz(){
+        WKInterfaceDevice.current().play(.notification)
+        WKInterfaceDevice.current().play(.notification)
+        WKInterfaceDevice.current().play(.notification)
+    }
+
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
