@@ -38,6 +38,12 @@ class atRailInterfaceController: WKInterfaceController, WCSessionDelegate {
             session.activate()
         }
         if let prompt = withContext as? Prompt { self.prompt = prompt }
+        else{
+            hallName.setText("China Hall 201")
+            promptText.setText("Artifacts")
+            itemImg.setImageNamed("scribbles")
+            railImg.setImageNamed("watchtorail")
+        }
     }
 
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
@@ -67,10 +73,6 @@ class atRailInterfaceController: WKInterfaceController, WCSessionDelegate {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
-        hallName.setText("China Hall 201")
-        promptText.setText("Artifacts")
-        itemImg.setImageNamed("scribbles")
-        railImg.setImageNamed("watchtorail")
         if (WCSession.isSupported()) {
             let session = WCSession.default()
             session.delegate = self
