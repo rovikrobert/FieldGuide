@@ -11,6 +11,7 @@
 		08539BA71E9CC2B50027369A /* Prompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08539BA31E9CC05B0027369A /* Prompt.swift */; };
 		08539BA81E9CC36B0027369A /* Prompts.json in Resources */ = {isa = PBXBuildFile; fileRef = 08539BA41E9CC05B0027369A /* Prompts.json */; };
 		086DC0701EA210B300247A2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B4D7EFC1E5FD75A00F285FF /* Assets.xcassets */; };
+		08ACF0871EA6D519005724E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08ACF0861EA6D519005724E2 /* Assets.xcassets */; };
 		5B4D7EF61E5FD75A00F285FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D7EF51E5FD75A00F285FF /* AppDelegate.swift */; };
 		5B4D7EF81E5FD75A00F285FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D7EF71E5FD75A00F285FF /* ViewController.swift */; };
 		5B4D7EFB1E5FD75A00F285FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B4D7EF91E5FD75A00F285FF /* Main.storyboard */; };
@@ -18,7 +19,6 @@
 		5B4D7F0B1E5FD75B00F285FF /* FieldGuideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D7F0A1E5FD75B00F285FF /* FieldGuideTests.swift */; };
 		5B4D7F101E5FD75B00F285FF /* FieldGuide WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 5B4D7F0F1E5FD75B00F285FF /* FieldGuide WatchKit App.app */; };
 		5B4D7F161E5FD75B00F285FF /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B4D7F141E5FD75B00F285FF /* Interface.storyboard */; };
-		5B4D7F181E5FD75B00F285FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B4D7F171E5FD75B00F285FF /* Assets.xcassets */; };
 		5B4D7F1F1E5FD75B00F285FF /* FieldGuide WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5B4D7F1E1E5FD75B00F285FF /* FieldGuide WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5B4D7F261E5FD75B00F285FF /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D7F251E5FD75B00F285FF /* InterfaceController.swift */; };
 		5B4D7F281E5FD75B00F285FF /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D7F271E5FD75B00F285FF /* ExtensionDelegate.swift */; };
@@ -84,6 +84,8 @@
 /* Begin PBXFileReference section */
 		08539BA31E9CC05B0027369A /* Prompt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prompt.swift; sourceTree = "<group>"; };
 		08539BA41E9CC05B0027369A /* Prompts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Prompts.json; sourceTree = "<group>"; };
+		08ACF0821EA5D9A0005724E2 /* FieldGuide.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FieldGuide.entitlements; sourceTree = "<group>"; };
+		08ACF0861EA6D519005724E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B4D7EF21E5FD75900F285FF /* FieldGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FieldGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B4D7EF51E5FD75A00F285FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B4D7EF71E5FD75A00F285FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -96,7 +98,6 @@
 		5B4D7F0C1E5FD75B00F285FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B4D7F0F1E5FD75B00F285FF /* FieldGuide WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FieldGuide WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B4D7F151E5FD75B00F285FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		5B4D7F171E5FD75B00F285FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B4D7F191E5FD75B00F285FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B4D7F1E1E5FD75B00F285FF /* FieldGuide WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "FieldGuide WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B4D7F241E5FD75B00F285FF /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
@@ -147,6 +148,13 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
+		08ACF0831EA5D9A6005724E2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5B4D7EE91E5FD75900F285FF = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +164,7 @@
 				5B4D7F221E5FD75B00F285FF /* FieldGuide WatchKit Extension */,
 				5B4D7EF31E5FD75900F285FF /* Products */,
 				08539BA21E9CC05B0027369A /* Shared */,
+				08ACF0831EA5D9A6005724E2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -173,6 +182,7 @@
 		5B4D7EF41E5FD75900F285FF /* FieldGuide */ = {
 			isa = PBXGroup;
 			children = (
+				08ACF0821EA5D9A0005724E2 /* FieldGuide.entitlements */,
 				5B4D7EF51E5FD75A00F285FF /* AppDelegate.swift */,
 				5B4D7EF71E5FD75A00F285FF /* ViewController.swift */,
 				5B4D7EF91E5FD75A00F285FF /* Main.storyboard */,
@@ -195,8 +205,8 @@
 		5B4D7F131E5FD75B00F285FF /* FieldGuide WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
+				08ACF0861EA6D519005724E2 /* Assets.xcassets */,
 				5B4D7F141E5FD75B00F285FF /* Interface.storyboard */,
-				5B4D7F171E5FD75B00F285FF /* Assets.xcassets */,
 				5B4D7F191E5FD75B00F285FF /* Info.plist */,
 			);
 			path = "FieldGuide WatchKit App";
@@ -320,6 +330,14 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = HL7S2EUM3A;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 0;
+							};
+						};
 					};
 					5B4D7F051E5FD75B00F285FF = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -383,7 +401,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B4D7F181E5FD75B00F285FF /* Assets.xcassets in Resources */,
+				08ACF0871EA6D519005724E2 /* Assets.xcassets in Resources */,
 				5B4D7F161E5FD75B00F285FF /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -649,6 +667,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FieldGuide/FieldGuide.entitlements;
 				DEVELOPMENT_TEAM = HL7S2EUM3A;
 				INFOPLIST_FILE = FieldGuide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -662,6 +681,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FieldGuide/FieldGuide.entitlements;
 				DEVELOPMENT_TEAM = HL7S2EUM3A;
 				INFOPLIST_FILE = FieldGuide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -15,6 +15,7 @@ class atRailInterfaceController: WKInterfaceController, WCSessionDelegate {
     @IBOutlet var promptText: WKInterfaceLabel!
     @IBOutlet var railImg: WKInterfaceImage!
     
+    
     var prompt: Prompt? {
         didSet {
             if let prompt = prompt {
@@ -77,14 +78,21 @@ class atRailInterfaceController: WKInterfaceController, WCSessionDelegate {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-
+    
+    
     @IBAction func connectToRail() {
-        railImg.setImageNamed("spinner")
-        railImg.startAnimating()
+        showStoryOnRail()
         
-        var request = URLRequest(url: URL(string: "http://127.0.0.1:8000/setwatchstory/")!)
+        self.presentController(withName: "ConnectedScreen", context: nil)
+        WKInterfaceDevice.current().play(.notification)
+    }
+    
+    func showStoryOnRail() {
+        //var request = URLRequest(url: URL(string: "http://127.0.0.1:8000/setdisplaystory/")!)
+        var request = URLRequest(url: URL(string: "http://digitalrail.xyz/setdisplaystory/")!)
         request.httpMethod = "POST"
-        let params = ["name": "watch", "promptId": prompt!.itemID] as Dictionary<String, String>
+        
+        let params = ["name": "watch"] as Dictionary<String, String>
         
         do {
             request.httpBody = try JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
@@ -93,25 +101,21 @@ class atRailInterfaceController: WKInterfaceController, WCSessionDelegate {
             print("error serializing data")
         }
         
-        
-        
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data, error == nil else {                                                 // check for fundamental networking error
+            guard let data = data, error == nil else {
+                // check for fundamental networking error
                 print("error=\(String(describing: error))")
                 return
             }
             
-            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {           // check for http errors
+            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
+                // check for http errors
                 print("statusCode should be 200, but is \(httpStatus.statusCode)")
                 print("response = \(String(describing: response))")
             }
             
             let responseString = String(data: data, encoding: .utf8)
             print("responseString = \(String(describing: responseString))")
-            
-            // reload base controller
-            self.presentController(withName: "ConnectedScreen", context: nil)
-            WKInterfaceDevice.current().play(.notification)
         }
         task.resume()
     }
