@@ -65,35 +65,8 @@ class PromptInterfaceController: WKInterfaceController, WCSessionDelegate {
     
     //posts the story id to the digital rail server when the user clicks
     @IBAction func setStoryId() {
-        //var request = URLRequest(url: URL(string: "http://127.0.0.1:8000/setwatchstory/")!)
-        var request = URLRequest(url: URL(string: "http://digitalrail.xyz/setwatchstory/")!)
-        
-        request.httpMethod = "POST"
         let params = ["name": "watch", "promptId": prompt!.itemID] as Dictionary<String, String>
-        
-        do {
-            request.httpBody = try JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
-        }
-        catch{
-            print("error serializing data")
-        }
-        
+        NetworkManager.shared().createAndSendRequest(path: "setwatchstory/", params: params)
         self.presentController(withName: "GuideCaseNum", context: self.prompt)
-        
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data, error == nil else {                                                 // check for fundamental networking error
-                print("error=\(String(describing: error))")
-                return
-            }
-            
-            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {           // check for http errors
-                print("statusCode should be 200, but is \(httpStatus.statusCode)")
-                print("response = \(String(describing: response))")
-            }
-            
-            let responseString = String(data: data, encoding: .utf8)
-            print("responseString = \(String(describing: responseString))")
-        }
-        task.resume()
     }
 }

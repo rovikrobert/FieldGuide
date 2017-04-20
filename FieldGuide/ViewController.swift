@@ -43,20 +43,7 @@ class ViewController: UIViewController, WCSessionDelegate {
             })
         }
     }
-    
-    @IBAction func connectToRail(_ sender: UIButton) {
-        if WCSession.default().isReachable == true {
-            let requestValues = ["command" : "Connect"]
-            let session = WCSession.default()
-            
-            session.sendMessage(requestValues, replyHandler: { reply in
-                self.ConnectStatus.text = reply["status"] as? String
-            }, errorHandler: { error in
-                print("error: \(error)")
-            })
-        }
-    }
-    
+
     @IBAction func toggleRailArea(_ sender: Any) {
         setWatchFlag()
     }
@@ -88,11 +75,14 @@ class ViewController: UIViewController, WCSessionDelegate {
         
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
+        
         if (WCSession.isSupported()) {
             let session = WCSession.default()
             session.delegate = self
             session.activate()
         }
+        
         RailStatus.text = ""
         ExhibitStatus.text = ""
         CollectStatus.text = ""
@@ -106,35 +96,26 @@ class ViewController: UIViewController, WCSessionDelegate {
     
     //sets the flag to show/hide the watch area on the digital rail
     func setWatchFlag() {
-        //var request = URLRequest(url: URL(string: "http://127.0.0.1:8000/setwatchstatus/")!)
-        var request = URLRequest(url: URL(string: "http://digitalrail.xyz/setwatchstatus/")!)
-        request.httpMethod = "POST"
-        
         let params = ["name": "ios"] as Dictionary<String, String>
-        
-        do {
-            request.httpBody = try JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
-        }
-        catch{
-            print("error serializing data")
-        }
-        
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data, error == nil else {                                                 // check for fundamental networking error
-                print("error=\(String(describing: error))")
-                return
-            }
-            
-            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {           // check for http errors
-                print("statusCode should be 200, but is \(httpStatus.statusCode)")
-                print("response = \(String(describing: response))")
-            }
-            
-            let responseString = String(data: data, encoding: .utf8)
-            print("responseString = \(String(describing: responseString))")
-        }
-        task.resume()
+        NetworkManager.shared().createAndSendRequest(path: "setwatchstatus/", params: params)
     }
     
+    func timerAction(_ timer: Timer){
+        let params = ["name": "ios"] as Dictionary<String, String>
+        NetworkManager.shared().createAndSendRequest(path: "getdisplaystory/", params: params)
+        
+        if(NetworkManager.shared().displayStory){
+            if WCSession.default().isReachable == true {
+                let requestValues = ["command" : "Connect"]
+                let session = WCSession.default()
+                
+                session.sendMessage(requestValues, replyHandler: { reply in
+                    self.ConnectStatus.text = reply["status"] as? String
+                }, errorHandler: { error in
+                    print("error: \(error)")
+                })
+            }
+        }
+    }
 }
 

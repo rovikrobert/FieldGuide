@@ -12,6 +12,8 @@
 		08539BA81E9CC36B0027369A /* Prompts.json in Resources */ = {isa = PBXBuildFile; fileRef = 08539BA41E9CC05B0027369A /* Prompts.json */; };
 		086DC0701EA210B300247A2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B4D7EFC1E5FD75A00F285FF /* Assets.xcassets */; };
 		08ACF0871EA6D519005724E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08ACF0861EA6D519005724E2 /* Assets.xcassets */; };
+		08B93A741EA81A0C003326F6 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B93A731EA81A0C003326F6 /* Network.swift */; };
+		08B93A751EA839E3003326F6 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B93A731EA81A0C003326F6 /* Network.swift */; };
 		5B4D7EF61E5FD75A00F285FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D7EF51E5FD75A00F285FF /* AppDelegate.swift */; };
 		5B4D7EF81E5FD75A00F285FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4D7EF71E5FD75A00F285FF /* ViewController.swift */; };
 		5B4D7EFB1E5FD75A00F285FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B4D7EF91E5FD75A00F285FF /* Main.storyboard */; };
@@ -86,6 +88,7 @@
 		08539BA41E9CC05B0027369A /* Prompts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Prompts.json; sourceTree = "<group>"; };
 		08ACF0821EA5D9A0005724E2 /* FieldGuide.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FieldGuide.entitlements; sourceTree = "<group>"; };
 		08ACF0861EA6D519005724E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		08B93A731EA81A0C003326F6 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		5B4D7EF21E5FD75900F285FF /* FieldGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FieldGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B4D7EF51E5FD75A00F285FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B4D7EF71E5FD75A00F285FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +147,7 @@
 			children = (
 				08539BA31E9CC05B0027369A /* Prompt.swift */,
 				08539BA41E9CC05B0027369A /* Prompts.json */,
+				08B93A731EA81A0C003326F6 /* Network.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -423,6 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B4D7EF81E5FD75A00F285FF /* ViewController.swift in Sources */,
+				08B93A741EA81A0C003326F6 /* Network.swift in Sources */,
 				5B4D7EF61E5FD75A00F285FF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,6 +449,7 @@
 				5B4D7F441E6093B200F285FF /* PromptInterfaceController.swift in Sources */,
 				5B5369871E6DD7900026F533 /* ConnectedInterfaceController.swift in Sources */,
 				5B5369891E6DD7C20026F533 /* CollectedInterfaceController.swift in Sources */,
+				08B93A751EA839E3003326F6 /* Network.swift in Sources */,
 				5B4D7F511E63330B00F285FF /* atRailInterfaceController.swift in Sources */,
 				5B5369841E6CF4700026F533 /* GuideCaseNumberControllerInterface.swift in Sources */,
 				5B4D7F281E5FD75B00F285FF /* ExtensionDelegate.swift in Sources */,
