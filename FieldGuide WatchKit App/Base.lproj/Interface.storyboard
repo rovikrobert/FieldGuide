@@ -114,19 +114,19 @@
                         <button alignment="left" accessibilityLabel="label" id="QMe-tu-bt1" userLabel="atRailButton">
                             <group key="contentGroup" width="1" height="140" alignment="left" layout="vertical" id="bCe-rg-fTy">
                                 <items>
-                                    <label width="1" alignment="left" text="How have Chinese characters evolved over time?" textAlignment="left" numberOfLines="3" id="tSd-h6-hyR">
+                                    <label width="1" height="50" alignment="left" text="How have Chinese characters evolved over time?" textAlignment="left" numberOfLines="3" id="tSd-h6-hyR">
                                         <color key="textColor" red="0.28221294279999998" green="0.28631031509999999" blue="0.28628185389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
                                     </label>
-                                    <imageView width="40" height="40" alignment="center" image="Circle" contentMode="scaleAspectFit" id="Feb-ss-y47"/>
-                                    <label width="1" height="41" alignment="center" verticalAlignment="bottom" text="Tap to continue reading on the exhibit screen" textAlignment="center" numberOfLines="3" id="dnh-1Q-gGK">
+                                    <imageView width="50" height="50" alignment="center" image="Circle" contentMode="scaleAspectFit" id="Feb-ss-y47"/>
+                                    <label width="1" height="25" alignment="center" verticalAlignment="bottom" text="Tap to continue reading on the exhibit screen" textAlignment="center" numberOfLines="3" id="dnh-1Q-gGK">
                                         <accessibilityTraits key="accessibilityTraits" button="YES" staticText="YES"/>
                                         <color key="textColor" red="0.28221294279999998" green="0.28631031509999999" blue="0.28628185389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="font" type="system" weight="semibold" pointSize="10"/>
                                     </label>
                                 </items>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <edgeInsets key="margins" left="5" right="5" top="2" bottom="2"/>
+                                <edgeInsets key="margins" left="5" right="5" top="2" bottom="5"/>
                             </group>
                             <connections>
                                 <action selector="connectToRail" destination="0us-vv-IyP" id="FeA-Qn-cJr"/>

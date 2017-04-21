@@ -16,6 +16,8 @@ class ViewController: UIViewController, WCSessionDelegate {
     @IBOutlet weak var CollectStatus: UILabel!
     @IBOutlet weak var ConnectStatus: UILabel!
     
+    var networkRequest: NetworkRequest = NetworkRequest.init()
+    
     @IBAction func arriveAtExhibit(_ sender: UIButton) {
         if WCSession.default().isReachable == true {
             let requestValues = ["command" : "Exhibit"]
@@ -72,8 +74,8 @@ class ViewController: UIViewController, WCSessionDelegate {
     }
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
         Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
         
@@ -82,11 +84,6 @@ class ViewController: UIViewController, WCSessionDelegate {
             session.delegate = self
             session.activate()
         }
-        
-        RailStatus.text = ""
-        ExhibitStatus.text = ""
-        CollectStatus.text = ""
-        ConnectStatus.text = ""
     }
 
     override func didReceiveMemoryWarning() {
@@ -97,20 +94,20 @@ class ViewController: UIViewController, WCSessionDelegate {
     //sets the flag to show/hide the watch area on the digital rail
     func setWatchFlag() {
         let params = ["name": "ios"] as Dictionary<String, String>
-        NetworkManager.shared().createAndSendRequest(path: "setwatchstatus/", params: params)
+        networkRequest.createAndSendRequest(path: "setwatchstatus/", params: params)
     }
     
     func timerAction(_ timer: Timer){
         let params = ["name": "ios"] as Dictionary<String, String>
-        NetworkManager.shared().createAndSendRequest(path: "getdisplaystory/", params: params)
+        networkRequest.createAndSendRequest(path: "getdisplaystory/", params: params)
         
-        if(NetworkManager.shared().displayStory){
+        if(networkRequest.displayStory){
             if WCSession.default().isReachable == true {
                 let requestValues = ["command" : "Connect"]
                 let session = WCSession.default()
                 
                 session.sendMessage(requestValues, replyHandler: { reply in
-                    self.ConnectStatus.text = reply["status"] as? String
+                    print("sent message")
                 }, errorHandler: { error in
                     print("error: \(error)")
                 })

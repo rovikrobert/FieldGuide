@@ -3,8 +3,6 @@
 //  FieldGuide
 //
 //  Created by Amartya Banerjee on 4/19/17.
-//  Copyright © 2017 SESP Walkup. All rights reserved.
-//
 
 import Foundation
 
@@ -13,31 +11,38 @@ public enum hostType: String{
     case remote = "http://digitalrail.xyz/"
 }
 
-class NetworkManager{
-    private static var sharedNetworkManager: NetworkManager = {
-        let networkManager = NetworkManager(host: hostType.remote.rawValue)
-        
+class NetworkSetting{
+    private static var sharedNetworkSetting: NetworkSetting = {
+        let networkManager = NetworkSetting(host: hostType.remote.rawValue)
         return networkManager
     }()
     
     let host: String
-    var displayStory: Bool
-    
+
     private init(host: String){
         self.host = host
+    }
+    
+    class func shared() -> NetworkSetting{
+        return sharedNetworkSetting
+    }
+}
+
+class NetworkRequest{
+    var displayStory: Bool
+    
+    init(){
         self.displayStory = false
     }
     
-    class func shared() -> NetworkManager{
-        return sharedNetworkManager
-    }
-    
     func createAndSendRequest(path: String, params: Dictionary<String, String>){
-        var request = URLRequest(url: URL(string: self.host + path)!)
+        var request = URLRequest(url: URL(string:  NetworkSetting.shared().host + path)!)
+        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        
         request.httpMethod = "POST"
         
         do {
-            request.httpBody = try JSONSerialization.data(withJSONObject: params)
+            request.httpBody = try JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
         }
         catch{
             print("error serializing data")

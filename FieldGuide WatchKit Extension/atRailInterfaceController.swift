@@ -15,6 +15,7 @@ class atRailInterfaceController: WKInterfaceController, WCSessionDelegate {
     @IBOutlet var promptText: WKInterfaceLabel!
     @IBOutlet var railImg: WKInterfaceImage!
     
+    var networkRequest: NetworkRequest = NetworkRequest.init()
     
     var prompt: Prompt? {
         didSet {
@@ -89,6 +90,6 @@ class atRailInterfaceController: WKInterfaceController, WCSessionDelegate {
     
     func showStoryOnRail() {
         let params = ["name": "watch"] as Dictionary<String, String>
-        NetworkManager.shared().createAndSendRequest(path: "setdisplaystory/", params: params)
+        networkRequest.createAndSendRequest(path: "setdisplaystory/", params: params)
     }
 }

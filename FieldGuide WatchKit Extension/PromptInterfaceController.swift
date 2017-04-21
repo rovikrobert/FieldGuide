@@ -28,6 +28,8 @@ class PromptInterfaceController: WKInterfaceController, WCSessionDelegate {
     
     @IBOutlet var PromptText: WKInterfaceLabel!
     
+    var networkRequest: NetworkRequest = NetworkRequest.init()
+    
     var prompt: Prompt? {
         didSet {
             if let prompt = prompt {
@@ -66,7 +68,7 @@ class PromptInterfaceController: WKInterfaceController, WCSessionDelegate {
     //posts the story id to the digital rail server when the user clicks
     @IBAction func setStoryId() {
         let params = ["name": "watch", "promptId": prompt!.itemID] as Dictionary<String, String>
-        NetworkManager.shared().createAndSendRequest(path: "setwatchstory/", params: params)
-        self.presentController(withName: "GuideCaseNum", context: self.prompt)
+        networkRequest.createAndSendRequest(path: "setwatchstory/", params: params)
+        presentController(withName: "GuideCaseNum", context: self.prompt)
     }
 }
