@@ -149,7 +149,7 @@
                         <group width="1" height="140" alignment="center" layout="vertical" id="MiL-Cz-4fN">
                             <items>
                                 <imageView width="1" height="65" alignment="center" image="screen" contentMode="scaleAspectFit" id="IBo-i2-Yoy"/>
-                                <label alignment="center" verticalAlignment="center" text="Find the screen with the orange indicator on top." textAlignment="center" numberOfLines="3" id="JTp-wk-N42">
+                                <label alignment="center" verticalAlignment="center" text="Find the screen with the red strip on top." textAlignment="center" numberOfLines="3" id="JTp-wk-N42">
                                     <color key="textColor" red="0.28221294279999998" green="0.28631031509999999" blue="0.28628185389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="font" type="system" pointSize="14"/>
                                 </label>
@@ -169,9 +169,7 @@
                     <items>
                         <group width="1" height="140" alignment="left" layout="vertical" id="VXR-zd-lRs">
                             <items>
-                                <imageView width="70" height="70" alignment="center" image="Connected" contentMode="scaleAspectFit" id="LNJ-YG-tY4">
-                                    <color key="tintColor" red="0.95978468656539917" green="0.65036934614181519" blue="0.13712078332901001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </imageView>
+                                <imageView width="60" height="60" alignment="center" verticalAlignment="center" image="connect" contentMode="scaleAspectFit" id="jzL-lk-wVg"/>
                                 <label width="128" alignment="center" verticalAlignment="bottom" text="You are connected to the exhibit" textAlignment="center" numberOfLines="3" id="pxR-e0-czC">
                                     <color key="textColor" red="0.28221294279999998" green="0.28631031509999999" blue="0.28628185389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="font" style="UICTFontTextStyleCaption2"/>

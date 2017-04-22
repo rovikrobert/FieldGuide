@@ -2,6 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "a.png",
       "scale" : "1x"
     },
     {
@@ -11,18 +12,10 @@
     {
       "idiom" : "universal",
       "scale" : "3x"
-    },
-    {
-      "idiom" : "watch",
-      "filename" : "connected.png",
-      "scale" : "2x"
     }
   ],
   "info" : {
     "version" : 1,
     "author" : "xcode"
-  },
-  "properties" : {
-    "template-rendering-intent" : "template"
   }
 }

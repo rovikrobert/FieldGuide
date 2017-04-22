@@ -13,7 +13,7 @@ public enum hostType: String{
 
 class NetworkSetting{
     private static var sharedNetworkSetting: NetworkSetting = {
-        let networkManager = NetworkSetting(host: hostType.remote.rawValue)
+        let networkManager = NetworkSetting(host: hostType.localhost.rawValue)
         return networkManager
     }()
     
