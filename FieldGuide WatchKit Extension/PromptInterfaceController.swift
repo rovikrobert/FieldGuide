@@ -43,6 +43,15 @@ class PromptInterfaceController: WKInterfaceController, WCSessionDelegate {
     }
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
+        let networkSetting = message as Dictionary
+        let setting = networkSetting["network"] as! String
+        
+        if(setting == "remote"){
+            NetworkSetting.shared().host = hostType.remote.rawValue
+        }
+        else{
+            NetworkSetting.shared().host = hostType.localhost.rawValue
+        }
     }
 
     

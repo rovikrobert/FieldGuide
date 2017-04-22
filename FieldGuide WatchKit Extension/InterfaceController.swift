@@ -50,6 +50,17 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             self.presentController(withNames: controllersNames as! [String], contexts: controllersContexts)
             WKInterfaceDevice.current().play(.notification)
             WKInterfaceDevice.current().play(.notification)
+        case "hostchange":
+            let networkSetting = message as Dictionary
+            let setting = networkSetting["network"] as! String
+            
+            if(setting == "remote"){
+                NetworkSetting.shared().host = hostType.remote.rawValue
+            }
+            else{
+                NetworkSetting.shared().host = hostType.localhost.rawValue
+            }
+            
         default:
             break
         }

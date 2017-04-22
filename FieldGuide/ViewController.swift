@@ -10,13 +10,32 @@ import UIKit
 import WatchConnectivity
 
 class ViewController: UIViewController, WCSessionDelegate {
-
-    @IBOutlet weak var RailStatus: UILabel!
-    @IBOutlet weak var ExhibitStatus: UILabel!
-    @IBOutlet weak var CollectStatus: UILabel!
-    @IBOutlet weak var ConnectStatus: UILabel!
-    
     var networkRequest: NetworkRequest = NetworkRequest.init()
+    
+    @IBOutlet var serverToggle: UISwitch!
+    
+    @IBAction func selectTargetServer(_ sender:UISwitch){
+        var requestValues = ["network" : "local", "command" : "hostchange"]
+        let session = WCSession.default()
+        
+        if(sender.isOn){
+            NetworkSetting.shared().host = hostType.remote.rawValue
+            requestValues["network"] = "remote"
+            
+        }
+        else{
+            NetworkSetting.shared().host = hostType.localhost.rawValue
+            requestValues["network"] = "local"
+        }
+        
+        if WCSession.default().isReachable == true {
+            session.sendMessage(requestValues, replyHandler: { reply in
+                print("sent message")
+            }, errorHandler: { error in
+                print("error: \(error)")
+            })
+        }
+    }
     
     @IBAction func arriveAtExhibit(_ sender: UIButton) {
         if WCSession.default().isReachable == true {
@@ -24,7 +43,7 @@ class ViewController: UIViewController, WCSessionDelegate {
             let session = WCSession.default()
             
             session.sendMessage(requestValues, replyHandler: { reply in
-                self.ExhibitStatus.text = reply["status"] as? String
+                print("sent message")
             }, errorHandler: { error in
                 print("error: \(error)")
             })
@@ -39,7 +58,7 @@ class ViewController: UIViewController, WCSessionDelegate {
             let session = WCSession.default()
             
             session.sendMessage(requestValues, replyHandler: { reply in
-                self.RailStatus.text = reply["status"] as? String
+                print("sent message")
             }, errorHandler: { error in
                 print("error: \(error)")
             })
@@ -56,7 +75,7 @@ class ViewController: UIViewController, WCSessionDelegate {
             let session = WCSession.default()
             
             session.sendMessage(requestValues, replyHandler: { reply in
-                self.CollectStatus.text = reply["status"] as? String
+                print("sent message")
             }, errorHandler: { error in
                 print("error: \(error)")
             })
@@ -99,7 +118,11 @@ class ViewController: UIViewController, WCSessionDelegate {
     
     func timerAction(_ timer: Timer){
         let params = ["name": "ios"] as Dictionary<String, String>
-        networkRequest.createAndSendRequest(path: "getdisplaystory/", params: params)
+        
+        if(networkRequest.requestReturnStatus){
+            print("sending another request")
+            networkRequest.createAndSendRequest(path: "getdisplaystory/", params: params)
+        }
         
         if(networkRequest.displayStory){
             if WCSession.default().isReachable == true {
