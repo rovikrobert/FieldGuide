@@ -61,6 +61,8 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
                 NetworkSetting.shared().host = hostType.localhost.rawValue
             }
             
+        case "Reset":
+            self.presentController(withName: "Museum", context: nil)
         default:
             break
         }
@@ -73,7 +75,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         if (WCSession.isSupported()) {
             let session = WCSession.default()
             session.delegate = self
-            session.activate()
+            //session.activate()
         }
     }
     

@@ -30,15 +30,18 @@ class NetworkSetting{
 
 class NetworkRequest{
     var requestReturnStatus: Bool
-    var displayStory: Bool
+    var prevReturnVal: NSDictionary
+    var returnVal: NSDictionary
     
     init(){
-        self.displayStory = false
-        self.requestReturnStatus = false
+        self.requestReturnStatus = true
+        self.prevReturnVal = NSDictionary.init()
+        self.returnVal = NSDictionary.init()
     }
     
     func createAndSendRequest(path: String, params: Dictionary<String, String>){
         requestReturnStatus = false
+        self.prevReturnVal = self.returnVal
         
         var request = URLRequest(url: URL(string:  NetworkSetting.shared().host + path)!)
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
@@ -67,16 +70,11 @@ class NetworkRequest{
             
             do {
                 let json = try JSONSerialization.jsonObject(with: data) as! NSDictionary
-                
+                self.returnVal = json
                 self.requestReturnStatus = true
-                
-                if (json.object(forKey: "displaystory") != nil){
-                    self.displayStory = json.object(forKey: "displaystory")! as! Bool
-                }
-                
             }
             catch {
-                //Handle error
+                print("error")
             }
         }
         task.resume()

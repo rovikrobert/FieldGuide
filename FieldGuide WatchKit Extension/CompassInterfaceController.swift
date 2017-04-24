@@ -39,7 +39,7 @@ class CompassInterfaceController: WKInterfaceController, WCSessionDelegate {
         if (WCSession.isSupported()) {
             let session = WCSession.default()
             session.delegate = self
-            session.activate()
+            //session.activate()
         }
     }
     

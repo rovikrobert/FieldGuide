@@ -24,10 +24,11 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nmv-rY-NJk">
                                 <rect key="frame" x="105" y="204" width="165" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.31671815414615967" green="0.55491371065386608" blue="0.72336632013320923" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.28221294279999998" green="0.28631031509999999" blue="0.28628185389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <inset key="titleEdgeInsets" minX="2" minY="2" maxX="2" maxY="2"/>
-                                <state key="normal" title="Arrival at Exhibit Area">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Enter Exhibit Area">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="arriveAtExhibit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mnA-Ew-eRO"/>
@@ -36,64 +37,67 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bp2-fv-FRz">
                                 <rect key="frame" x="105" y="280" width="165" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.31671815409999998" green="0.55491371069999995" blue="0.72336632010000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.28221294279999998" green="0.28631031509999999" blue="0.28628185389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <inset key="titleEdgeInsets" minX="2" minY="2" maxX="2" maxY="2"/>
-                                <state key="normal" title="Arrival at Digital Rail">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Arrive at Digital Rail">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="arriveAtRail:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IqX-3e-cC9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kzy-wM-Zrg">
-                                <rect key="frame" x="105" y="436" width="165" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.31671815409999998" green="0.55491371069999995" blue="0.72336632010000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <inset key="titleEdgeInsets" minX="2" minY="2" maxX="2" maxY="2"/>
-                                <state key="normal" title="Collect Information">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="collectInformation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Jw-08-EkA"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gx5-XQ-Sy9">
-                                <rect key="frame" x="142" y="587" width="91" height="30"/>
-                                <color key="backgroundColor" red="0.95281940700000001" green="0.54311341049999995" blue="0.36534529919999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Reset Screen">
+                                <rect key="frame" x="105" y="517" width="165" height="30"/>
+                                <color key="backgroundColor" red="0.847628355" green="0.33337435129999998" blue="0.31211116909999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="165" id="Ml8-QF-nqa"/>
+                                    <constraint firstAttribute="height" constant="30" id="Uvl-Aj-YNa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <state key="normal" title="Reset">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="toggleRailArea:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wh6-aH-l1M"/>
+                                    <action selector="resetRail:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LY1-Pe-PrU"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Field Guide Control Panel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVy-B9-Ho6">
-                                <rect key="frame" x="87" y="70" width="201" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Control Panel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVy-B9-Ho6">
+                                <rect key="frame" x="131" y="90" width="112" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.28221294279999998" green="0.28631031509999999" blue="0.28628185389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" red="0.28221294279999998" green="0.28631031509999999" blue="0.28628185389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Field Logo" translatesAutoresizingMaskIntoConstraints="NO" id="sPZ-V2-ApN">
+                                <rect key="frame" x="162" y="30" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Ja5-rx-Zaj"/>
+                                    <constraint firstAttribute="height" constant="50" id="P6C-oR-JLv"/>
+                                </constraints>
+                            </imageView>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QrX-zX-zpj">
-                                <rect key="frame" x="250" y="138" width="51" height="31"/>
+                                <rect key="frame" x="250" y="598" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="selectTargetServer:" destination="BYZ-38-t0r" eventType="valueChanged" id="aiF-52-GNl"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Run on Digital Rail" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gti-hN-4d9">
-                                <rect key="frame" x="75" y="148" width="167" height="21"/>
+                                <rect key="frame" x="75" y="608" width="167" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <color key="textColor" red="0.28221294279999998" green="0.28631031509999999" blue="0.28628185389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="KVy-B9-Ho6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Z0-YS-E0q"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gx5-XQ-Sy9" secondAttribute="bottom" constant="50" id="DSo-jP-nyS"/>
-                            <constraint firstItem="KVy-B9-Ho6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="YPI-MP-Bmf"/>
+                            <constraint firstItem="sPZ-V2-ApN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AlW-sq-twD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gx5-XQ-Sy9" secondAttribute="bottom" constant="120" id="DSo-jP-nyS"/>
+                            <constraint firstItem="KVy-B9-Ho6" firstAttribute="top" secondItem="sPZ-V2-ApN" secondAttribute="bottom" constant="10" id="LCr-z0-s3E"/>
                             <constraint firstItem="gx5-XQ-Sy9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YiV-Au-cbX"/>
+                            <constraint firstItem="sPZ-V2-ApN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="v9K-43-rgz"/>
                         </constraints>
                     </view>
                     <connections>
@@ -105,4 +109,7 @@
             <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Field Logo" width="225" height="225"/>
+    </resources>
 </document>

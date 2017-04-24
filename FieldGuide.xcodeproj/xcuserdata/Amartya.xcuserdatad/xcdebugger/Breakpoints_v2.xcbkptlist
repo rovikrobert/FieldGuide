@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FieldGuide/ViewController.swift"
-            timestampString = "514542211.322067"
+            timestampString = "514704017.560985"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "arriveAtRail(_:)"
             landmarkType = "7">
          </BreakpointContent>

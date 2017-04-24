@@ -32,28 +32,24 @@ class atRailInterfaceController: WKInterfaceController, WCSessionDelegate {
         if (WCSession.isSupported()) {
             let session = WCSession.default()
             session.delegate = self
-            session.activate()
+            //session.activate()
         }
         if let prompt = withContext as? Prompt { self.prompt = prompt }
     }
 
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
-        
-        var replyValues = Dictionary<String, Any>()
-        
-        
         switch message["command"] as! String {
-        case "Connect" :
-            replyValues["status"] = "Done"
         
+        case "Connect" :
             self.presentController(withNames: ["ConnectedScreen"], contexts: nil)
             WKInterfaceDevice.current().play(.notification)
             WKInterfaceDevice.current().play(.notification)
+        
         case "Exhibit" :
-            replyValues["status"] = "Done"
-            
             self.dismiss()
             WKInterfaceDevice.current().play(.notification)
+        
+        //hostchange handles the toggle between localhost & remote servers
         case "hostchange":
             let networkSetting = message as Dictionary
             let setting = networkSetting["network"] as! String
@@ -67,7 +63,6 @@ class atRailInterfaceController: WKInterfaceController, WCSessionDelegate {
         default:
             break
         }
-        replyHandler(replyValues)
     }
 
     
@@ -77,7 +72,7 @@ class atRailInterfaceController: WKInterfaceController, WCSessionDelegate {
         if (WCSession.isSupported()) {
             let session = WCSession.default()
             session.delegate = self
-            session.activate()
+            //session.activate()
         }
         
     }

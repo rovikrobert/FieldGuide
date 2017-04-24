@@ -17,7 +17,7 @@ class PromptInterfaceController: WKInterfaceController, WCSessionDelegate {
         if (WCSession.isSupported()) {
             let session = WCSession.default()
             session.delegate = self
-            session.activate()
+            //session.activate()
         }
         if let prompt = withContext as? Prompt { self.prompt = prompt }
     }
@@ -44,9 +44,11 @@ class PromptInterfaceController: WKInterfaceController, WCSessionDelegate {
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
         let networkSetting = message as Dictionary
-        let setting = networkSetting["network"] as! String
-        
-        if(setting == "remote"){
+        guard let setting = networkSetting["network"] else{
+            print("network settings not updated")
+            return
+        }
+        if(setting as! String  == "remote"){
             NetworkSetting.shared().host = hostType.remote.rawValue
         }
         else{
@@ -62,7 +64,7 @@ class PromptInterfaceController: WKInterfaceController, WCSessionDelegate {
         if (WCSession.isSupported()) {
             let session = WCSession.default()
             session.delegate = self
-            session.activate()
+            //session.activate()
         }
     }
     

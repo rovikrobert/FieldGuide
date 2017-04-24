@@ -24,7 +24,7 @@ class GuideCaseNumberControllerInterface: WKInterfaceController, WCSessionDelega
         if (WCSession.isSupported()) {
             let session = WCSession.default()
             session.delegate = self
-            session.activate()
+            //session.activate()
         }
         if let prompt = withContext as? Prompt { self.prompt = prompt }
     }
@@ -35,7 +35,7 @@ class GuideCaseNumberControllerInterface: WKInterfaceController, WCSessionDelega
         if (WCSession.isSupported()) {
             let session = WCSession.default()
             session.delegate = self
-            session.activate()
+            //session.activate()
         }
     }
     

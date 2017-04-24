@@ -18,7 +18,7 @@ class ConnectedInterfaceController: WKInterfaceController, WCSessionDelegate {
         if (WCSession.isSupported()) {
             let session = WCSession.default()
             session.delegate = self
-            session.activate()
+            //session.activate()
         }
         // Configure interface objects here.
     }
@@ -29,7 +29,7 @@ class ConnectedInterfaceController: WKInterfaceController, WCSessionDelegate {
         if (WCSession.isSupported()) {
             let session = WCSession.default()
             session.delegate = self
-            session.activate()
+            //session.activate()
         }
     }
 
