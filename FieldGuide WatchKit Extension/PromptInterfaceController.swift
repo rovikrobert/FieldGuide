@@ -43,6 +43,13 @@ class PromptInterfaceController: WKInterfaceController, WCSessionDelegate {
     }
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
+        switch message["command"] as! String {
+            case "Reset":
+                self.presentController(withName: "Museum", context: nil)
+            default:
+                break
+        }
+        
         let networkSetting = message as Dictionary
         guard let setting = networkSetting["network"] else{
             print("network settings not updated")

@@ -43,19 +43,23 @@ class ConnectedInterfaceController: WKInterfaceController, WCSessionDelegate {
         var replyValues = Dictionary<String, Any>()
         
         switch message["command"] as! String {
-        case "Rail" :
-            replyValues["status"] = "Done"
-            // reload base controller
-            self.dismiss()
-            WKInterfaceDevice.current().play(.notification)
-        case "Collect" :
-            replyValues["status"] = "Done"
-            // reload base controller
-            self.presentController(withName: "CollectedScreen", context: nil)
-            WKInterfaceDevice.current().play(.notification)
-        default:
-            break
+            case "Rail" :
+                replyValues["status"] = "Done"
+                // reload base controller
+                self.dismiss()
+                WKInterfaceDevice.current().play(.notification)
+            case "Collect" :
+                replyValues["status"] = "Done"
+                // reload base controller
+                self.presentController(withName: "CollectedScreen", context: nil)
+                WKInterfaceDevice.current().play(.notification)
+            case "Reset":
+                self.presentController(withName: "Museum", context: nil)
+            
+            default:
+                break
         }
+        
         replyHandler(replyValues)
     }
     

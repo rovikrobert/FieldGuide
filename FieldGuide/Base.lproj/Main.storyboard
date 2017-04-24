@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,10 +22,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nmv-rY-NJk">
-                                <rect key="frame" x="105" y="204" width="165" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nmv-rY-NJk">
+                                <rect key="frame" x="112.5" y="213.5" width="150" height="50"/>
                                 <color key="backgroundColor" red="0.28221294279999998" green="0.28631031509999999" blue="0.28628185389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="VG5-4E-E9l"/>
+                                    <constraint firstAttribute="width" constant="150" id="yAc-0n-QIg"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <inset key="titleEdgeInsets" minX="2" minY="2" maxX="2" maxY="2"/>
                                 <state key="normal" title="Enter Exhibit Area">
@@ -34,10 +38,13 @@
                                     <action selector="arriveAtExhibit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mnA-Ew-eRO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bp2-fv-FRz">
-                                <rect key="frame" x="105" y="280" width="165" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bp2-fv-FRz">
+                                <rect key="frame" x="112.5" y="308.5" width="150" height="50"/>
                                 <color key="backgroundColor" red="0.28221294279999998" green="0.28631031509999999" blue="0.28628185389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8wa-kC-4z4"/>
+                                    <constraint firstAttribute="width" constant="150" id="d45-3G-BN2"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <inset key="titleEdgeInsets" minX="2" minY="2" maxX="2" maxY="2"/>
                                 <state key="normal" title="Arrive at Digital Rail">
@@ -48,10 +55,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gx5-XQ-Sy9">
-                                <rect key="frame" x="105" y="517" width="165" height="30"/>
+                                <rect key="frame" x="113" y="517" width="150" height="30"/>
                                 <color key="backgroundColor" red="0.847628355" green="0.33337435129999998" blue="0.31211116909999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="165" id="Ml8-QF-nqa"/>
+                                    <constraint firstAttribute="width" constant="150" id="Ml8-QF-nqa"/>
                                     <constraint firstAttribute="height" constant="30" id="Uvl-Aj-YNa"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
@@ -75,16 +82,14 @@
                                     <constraint firstAttribute="height" constant="50" id="P6C-oR-JLv"/>
                                 </constraints>
                             </imageView>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QrX-zX-zpj">
-                                <rect key="frame" x="250" y="598" width="51" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QrX-zX-zpj">
+                                <rect key="frame" x="240" y="596" width="51" height="31"/>
                                 <connections>
                                     <action selector="selectTargetServer:" destination="BYZ-38-t0r" eventType="valueChanged" id="aiF-52-GNl"/>
                                 </connections>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Run on Digital Rail" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gti-hN-4d9">
-                                <rect key="frame" x="75" y="608" width="167" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Run on Digital Rail" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gti-hN-4d9">
+                                <rect key="frame" x="76" y="606" width="144" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <color key="textColor" red="0.28221294279999998" green="0.28631031509999999" blue="0.28628185389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -93,11 +98,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="KVy-B9-Ho6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Z0-YS-E0q"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Gti-hN-4d9" secondAttribute="bottom" constant="40" id="8ye-dO-RGu"/>
+                            <constraint firstItem="QrX-zX-zpj" firstAttribute="leading" secondItem="Gti-hN-4d9" secondAttribute="trailing" constant="20" id="9mq-V1-fst"/>
                             <constraint firstItem="sPZ-V2-ApN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AlW-sq-twD"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gx5-XQ-Sy9" secondAttribute="bottom" constant="120" id="DSo-jP-nyS"/>
                             <constraint firstItem="KVy-B9-Ho6" firstAttribute="top" secondItem="sPZ-V2-ApN" secondAttribute="bottom" constant="10" id="LCr-z0-s3E"/>
+                            <constraint firstItem="Gti-hN-4d9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="60" id="W2x-Lj-zS3"/>
+                            <constraint firstItem="bp2-fv-FRz" firstAttribute="top" secondItem="Nmv-rY-NJk" secondAttribute="bottom" constant="45" id="WRc-2u-d09"/>
                             <constraint firstItem="gx5-XQ-Sy9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YiV-Au-cbX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QrX-zX-zpj" secondAttribute="bottom" constant="40" id="ctI-DQ-HmO"/>
+                            <constraint firstItem="Nmv-rY-NJk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h3a-MO-ARu"/>
                             <constraint firstItem="sPZ-V2-ApN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="v9K-43-rgz"/>
+                            <constraint firstItem="bp2-fv-FRz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vMS-fu-s6N"/>
+                            <constraint firstItem="bp2-fv-FRz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yrG-pE-WxR"/>
                         </constraints>
                     </view>
                     <connections>

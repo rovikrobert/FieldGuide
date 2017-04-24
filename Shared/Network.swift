@@ -13,7 +13,7 @@ public enum hostType: String{
 
 class NetworkSetting{
     private static var sharedNetworkSetting: NetworkSetting = {
-        let networkManager = NetworkSetting(host: hostType.localhost.rawValue)
+        let networkManager = NetworkSetting(host: hostType.remote.rawValue)
         return networkManager
     }()
     
@@ -54,6 +54,8 @@ class NetworkRequest{
         catch{
             print("error serializing data")
         }
+        
+        URLSession.shared.configuration.httpShouldSetCookies = true
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else {

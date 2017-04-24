@@ -49,13 +49,15 @@ class CompassInterfaceController: WKInterfaceController, WCSessionDelegate {
         
         
         switch message["command"] as! String {
-        case "Rail" :
-            replyValues["status"] = "Done"
-            // reload base controller
-            self.presentController(withName: "atRail", context: self.prompt)
-            WKInterfaceDevice.current().play(.notification)
-        default:
-            break
+            case "Rail" :
+                replyValues["status"] = "Done"
+                // reload base controller
+                self.presentController(withName: "atRail", context: self.prompt)
+                WKInterfaceDevice.current().play(.notification)
+            case "Reset":
+                self.presentController(withName: "Museum", context: nil)
+            default:
+                break
         }
         replyHandler(replyValues)
     }

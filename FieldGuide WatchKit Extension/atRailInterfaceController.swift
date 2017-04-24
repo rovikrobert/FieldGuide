@@ -39,29 +39,30 @@ class atRailInterfaceController: WKInterfaceController, WCSessionDelegate {
 
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
         switch message["command"] as! String {
-        
-        case "Connect" :
-            self.presentController(withNames: ["ConnectedScreen"], contexts: nil)
-            WKInterfaceDevice.current().play(.notification)
-            WKInterfaceDevice.current().play(.notification)
-        
-        case "Exhibit" :
-            self.dismiss()
-            WKInterfaceDevice.current().play(.notification)
-        
-        //hostchange handles the toggle between localhost & remote servers
-        case "hostchange":
-            let networkSetting = message as Dictionary
-            let setting = networkSetting["network"] as! String
+            case "Connect" :
+                self.presentController(withNames: ["ConnectedScreen"], contexts: nil)
+                WKInterfaceDevice.current().play(.notification)
+                WKInterfaceDevice.current().play(.notification)
             
-            if(setting == "remote"){
-                NetworkSetting.shared().host = hostType.remote.rawValue
-            }
-            else{
-                NetworkSetting.shared().host = hostType.localhost.rawValue
-            }
-        default:
-            break
+            case "Exhibit" :
+                self.dismiss()
+                WKInterfaceDevice.current().play(.notification)
+            
+            //hostchange handles the toggle between localhost & remote servers
+            case "hostchange":
+                let networkSetting = message as Dictionary
+                let setting = networkSetting["network"] as! String
+                
+                if(setting == "remote"){
+                    NetworkSetting.shared().host = hostType.remote.rawValue
+                }
+                else{
+                    NetworkSetting.shared().host = hostType.localhost.rawValue
+                }
+            case "Reset":
+                self.presentController(withName: "Museum", context: nil)
+            default:
+                break
         }
     }
 
