@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FieldGuide/ViewController.swift"
-            timestampString = "514704017.560985"
+            timestampString = "514933376.652675"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "arriveAtRail(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -48,22 +48,6 @@
             startingLineNumber = "50"
             endingLineNumber = "50"
             landmarkName = "session(_:didReceiveMessage:replyHandler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FieldGuide/ViewController.swift"
-            timestampString = "514767166.906227"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "159"
-            endingLineNumber = "159"
-            landmarkName = "timerAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

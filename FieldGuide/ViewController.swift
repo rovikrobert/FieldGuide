@@ -72,6 +72,7 @@ class ViewController: UIViewController, WCSessionDelegate {
     @IBAction func resetRail(_ sender: Any) {
         setWatchFlag()
         watchAreaTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
+        saveDataTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerSaveAction), userInfo: nil, repeats: true)
         
         if WCSession.default().isReachable == true {
             let requestValues = ["command" : "Reset"]
@@ -144,6 +145,9 @@ class ViewController: UIViewController, WCSessionDelegate {
         
         if(watchAreaRequest.returnVal.object(forKey: "displaystory") != nil){
             if(watchAreaRequest.returnVal.object(forKey: "displaystory") as! Bool){
+                //stop polling for database changes after sending message to watch
+                watchAreaTimer.invalidate()
+                
                 if WCSession.default().isReachable == true {
                     let requestValues = ["command" : "Connect"]
                     let session = WCSession.default()
@@ -154,9 +158,6 @@ class ViewController: UIViewController, WCSessionDelegate {
                         print("error: \(error)")
                     })
                 }
-                
-                //stop polling for database changes after sending message to watch
-                watchAreaTimer.invalidate()
             }
         }
     }

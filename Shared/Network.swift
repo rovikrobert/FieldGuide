@@ -8,7 +8,7 @@ import Foundation
 
 public enum hostType: String{
     case localhost = "http://127.0.0.1:8000/"
-    case remote = "http://digitalrail.xyz/"
+    case remote = "http://www.digitalrails.xyz/"
 }
 
 class NetworkSetting{
